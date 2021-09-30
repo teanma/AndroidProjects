@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">TareaTextView</string>
+    <string name="tv1_title">1.TextView</string>
+    <string name="tv1_body">Nombre y apellidos</string>
+    <string name="tv2_title">2.Cambiar color</string>
+    <string name="tv2_body">Texto color Material Indigo 500</string>
+    <string name="tv3_title">3.Cambiar tamaño</string>
+    <string name="tv3_body1">Tamaño de 14sp</string>
+    <string name="tv3_body2">Tamaño de 16sp</string>
+    <string name="tv3_body3">Tamaño de 20sp</string>
+    <string name="tv3_body4">Tamaño de 24sp</string>
+    <string name="tv4_title">4.Cambiar estilo de fuente</string>
+    <string name="tv4_body1">Estilo normal</string>
+    <string name="tv4_body2">Estilo en negrita</string>
+    <string name="tv4_body3">Estilo itálico</string>
+    <string name="tv4_body4">Estilo itálico y negrita</string>
+</resources>
