@@ -14,4 +14,12 @@
     <string name="tv4_body2">Estilo en negrita</string>
     <string name="tv4_body3">Estilo itálico</string>
     <string name="tv4_body4">Estilo itálico y negrita</string>
+    <string name="tv5_title">5.Cambiar tipo de fuente</string>
+    <string name="tv5_body1">Tipo de fuente sans</string>
+    <string name="tv5_body2">Tipo de fuente serif</string>
+    <string name="tv5_body3">Tipo de fuente monospace</string>
+    <string name="tv6_title">6.Cambiar urls a links clickeables</string>
+    <string name="tv6_body1">https://www.w3schools.com</string>
+    <string name="tv7_title">7.Convertir a mayúsculas</string>
+    <string name="tv7_body1">https://www.w3schools.com</string>
 </resources>
