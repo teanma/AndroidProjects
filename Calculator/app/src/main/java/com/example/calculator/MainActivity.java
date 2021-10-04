@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 public class MainActivity extends AppCompatActivity {
 
     EditText etNum1, etNum2;
@@ -22,12 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         etNum1 = (EditText) findViewById(R.id.etNum1);
         etNum2 = (EditText) findViewById(R.id.etNum2);
-
         tvResultado = (TextView) findViewById(R.id.tvResultado);
-
-        if (etNum1.equals("") || etNum2.equals("")) {
-            tvResultado.setText("Introduce los números");
-        }
     }
 
     public void suma(View v) {
