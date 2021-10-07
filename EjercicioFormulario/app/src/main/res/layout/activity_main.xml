@@ -18,7 +18,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.068" />
+        app:layout_constraintVertical_bias="0.049" />
 
     <TextView
         android:id="@+id/tvApellido"
@@ -33,12 +33,13 @@
         android:id="@+id/etNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:text="Nombre"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -59,8 +60,8 @@
         android:id="@+id/tvNombreIntroducidoLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="240dp"
         android:text="Nombre introducido"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etApellido" />
@@ -79,7 +80,7 @@
         android:id="@+id/tvValorNombreIntroducido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="240dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.662"
@@ -102,7 +103,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="132dp"
         android:onClick="cargar"
         android:text="Cargar datos"
         app:layout_constraintStart_toStartOf="parent"
@@ -156,7 +157,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="24dp"
         android:text="Observaciones"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etMovil" />
@@ -166,7 +167,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="4dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
@@ -230,5 +231,17 @@
         android:text="TextView"
         app:layout_constraintStart_toStartOf="@+id/tvValorMovilIntroducido"
         app:layout_constraintTop_toBottomOf="@+id/tvValorMovilIntroducido" />
+
+    <ToggleButton
+        android:id="@+id/tb_activacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:checked="false"
+        android:onClick="desactivar"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/etObservaciones"
+        app:layout_constraintStart_toEndOf="@+id/etObservaciones"
+        app:layout_constraintTop_toTopOf="@+id/etObservaciones" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
