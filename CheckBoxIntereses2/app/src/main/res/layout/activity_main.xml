@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_pregunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="21dp"
+        android:text="¿Dónde oíste sobre nosotros? "
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/cb_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cb_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Tv"
+        app:layout_constraintBottom_toTopOf="@+id/cb_radio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pregunta" />
+
+    <CheckBox
+        android:id="@+id/cb_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Radio"
+        app:layout_constraintBottom_toTopOf="@+id/cb_periodico"
+        app:layout_constraintStart_toStartOf="@+id/cb_tv"
+        app:layout_constraintTop_toBottomOf="@+id/cb_tv" />
+
+    <CheckBox
+        android:id="@+id/cb_periodico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Periódico"
+        app:layout_constraintBottom_toTopOf="@+id/cb_amigo"
+        app:layout_constraintStart_toStartOf="@+id/cb_radio"
+        app:layout_constraintTop_toBottomOf="@+id/cb_radio" />
+
+    <CheckBox
+        android:id="@+id/cb_amigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Un amigo"
+        app:layout_constraintBottom_toTopOf="@+id/cb_otros"
+        app:layout_constraintStart_toStartOf="@+id/cb_periodico"
+        app:layout_constraintTop_toBottomOf="@+id/cb_periodico" />
+
+    <CheckBox
+        android:id="@+id/cb_otros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Otros"
+        app:layout_constraintBottom_toTopOf="@+id/et_otros"
+        app:layout_constraintStart_toStartOf="@+id/cb_amigo"
+        app:layout_constraintTop_toBottomOf="@+id/cb_amigo" />
+
+    <EditText
+        android:id="@+id/et_otros"
+        android:layout_width="323dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="¿Cuáles otros?"
+        app:layout_constraintBottom_toTopOf="@+id/btn_cargar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_otros"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btn_cargar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="19dp"
+        android:onClick="cargar"
+        android:text="CARGAR INFO"
+        app:layout_constraintBottom_toTopOf="@+id/tv_mensaje"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_otros" />
+
+    <TextView
+        android:id="@+id/tv_mensaje"
+        android:layout_width="351dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="242dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cargar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
