@@ -28,8 +28,16 @@ public class MainActivity extends AppCompatActivity {
         cb_amigo = (CheckBox) findViewById(R.id.cb_amigo);
         cb_otros = (CheckBox) findViewById(R.id.cb_otros);
         et_otros = (EditText) findViewById(R.id.et_otros);
-        et_otros.setVisibility(View.INVISIBLE);
         tv_mensaje = (TextView) findViewById(R.id.tv_mensaje);
+        et_otros.setVisibility(View.GONE);
+    }
+
+    public void showEditText(View v) {
+        if(cb_otros.isChecked()) {
+            et_otros.setVisibility(View.VISIBLE);
+        } else {
+            et_otros.setVisibility(View.GONE);
+        }
     }
 
     public void cargar(View v) {
@@ -49,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
             opciones.add(cb_amigo.getText().toString());
         }
         if(cb_otros.isChecked()) {
-            et_otros.setVisibility(View.VISIBLE);
             opciones.add(et_otros.getText().toString());
         }
         tv_mensaje.setText("Gracias por escuchar sobre nosotros en " + opciones.toString());

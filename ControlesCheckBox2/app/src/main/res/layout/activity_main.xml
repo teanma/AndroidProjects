@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_hello_world"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="33dp"
+        android:text="Hello World!"
+        app:layout_constraintStart_toStartOf="@+id/btn_toast"
+        app:layout_constraintTop_toBottomOf="@+id/btn_toast" />
+
+    <Button
+        android:id="@+id/btn_toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="40dp"
+        android:onClick="showToast"
+        android:text="MOSTRAR TOAST"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_hockey" />
+
+    <CheckBox
+        android:id="@+id/cb_futbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="96dp"
+        android:text="Fútbol"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cb_baloncesto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text="Baloncesto"
+        app:layout_constraintStart_toStartOf="@+id/cb_futbol"
+        app:layout_constraintTop_toBottomOf="@+id/cb_futbol" />
+
+    <CheckBox
+        android:id="@+id/cb_hockey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Hockey"
+        app:layout_constraintStart_toStartOf="@+id/cb_baloncesto"
+        app:layout_constraintTop_toBottomOf="@+id/cb_baloncesto" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
