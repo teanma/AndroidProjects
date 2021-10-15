@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/img_btn_fruta"
+        android:layout_width="130dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:onClick="showFruits"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fruta"
+        app:srcCompat="@drawable/fruta"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/img_btn_verdura"
+        android:layout_width="145dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="13dp"
+        android:onClick="showVegetables"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_verdura"
+        app:srcCompat="@drawable/verdura"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/img_btn_albaricoque"
+        android:layout_width="154dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="15dp"
+        android:onClick="addAlbaricoque"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/albaricoque"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/img_btn_platano"
+        android:layout_width="130dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15dp"
+        android:onClick="addPlatano"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_btn_albaricoque"
+        app:srcCompat="@drawable/platano"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/img_btn_pimiento"
+        android:layout_width="144dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="12dp"
+        android:onClick="addPimiento"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_btn_platano"
+        app:srcCompat="@drawable/pimiento"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/img_btn_patata"
+        android:layout_width="145dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="12dp"
+        android:onClick="addPatata"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_btn_pimiento"
+        app:srcCompat="@drawable/patata"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/tv_fruta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="56dp"
+        android:text="fruta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_verdura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="107dp"
+        android:text="verdura"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_btn_fruta" />
+
+    <TextView
+        android:id="@+id/tv_albaricoque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="10dp"
+        android:text="albaricoque"
+        app:layout_constraintEnd_toStartOf="@+id/img_btn_albaricoque"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_platano"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="89dp"
+        android:layout_marginEnd="38dp"
+        android:text="plátano"
+        app:layout_constraintEnd_toStartOf="@+id/img_btn_platano"
+        app:layout_constraintTop_toBottomOf="@+id/tv_albaricoque" />
+
+    <TextView
+        android:id="@+id/tv_pimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="22dp"
+        android:text="pimiento"
+        app:layout_constraintEnd_toStartOf="@+id/img_btn_pimiento"
+        app:layout_constraintTop_toBottomOf="@+id/tv_platano" />
+
+    <TextView
+        android:id="@+id/tv_patata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="82dp"
+        android:layout_marginEnd="28dp"
+        android:text="patata"
+        app:layout_constraintEnd_toStartOf="@+id/img_btn_patata"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pimiento" />
+
+    <TextView
+        android:id="@+id/tv_cesta_compra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="97dp"
+        android:text="Cesta de la compra:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_btn_verdura" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="129dp"
+        android:layout_height="220dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cesta_compra" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
