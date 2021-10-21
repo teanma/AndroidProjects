@@ -148,16 +148,16 @@
         android:id="@+id/tv_cesta_compra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="97dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="41dp"
         android:text="Cesta de la compra:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_btn_verdura" />
 
     <TextView
         android:id="@+id/tv_result"
-        android:layout_width="129dp"
-        android:layout_height="220dp"
+        android:layout_width="125dp"
+        android:layout_height="278dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="12dp"
         app:layout_constraintStart_toStartOf="parent"

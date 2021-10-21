@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_encuesta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="55dp"
+        android:text="Encuesta sobre sistemas operativos"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_voto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="18dp"
+        android:text="Vota por el mejor sistema"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_encuesta" />
+
+    <RadioGroup
+        android:id="@+id/rg_sistemas_operativos"
+        android:layout_width="196dp"
+        android:layout_height="194dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_voto">
+
+        <RadioButton
+            android:id="@+id/rb_windows"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Windows" />
+
+        <RadioButton
+            android:id="@+id/rb_linux"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Linux" />
+
+        <RadioButton
+            android:id="@+id/rb_ios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="iOS" />
+
+        <RadioButton
+            android:id="@+id/rb_android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Android" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/iv_windows"
+        android:layout_width="95dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="59dp"
+        app:layout_constraintStart_toEndOf="@+id/rg_sistemas_operativos"
+        app:layout_constraintTop_toBottomOf="@+id/tv_encuesta"
+        app:srcCompat="@drawable/windows" />
+
+    <ImageView
+        android:id="@+id/iv_linux"
+        android:layout_width="95dp"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toEndOf="@+id/rg_sistemas_operativos"
+        app:layout_constraintTop_toBottomOf="@+id/iv_windows"
+        app:srcCompat="@drawable/linux" />
+
+    <ImageView
+        android:id="@+id/iv_ios"
+        android:layout_width="95dp"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toEndOf="@+id/rg_sistemas_operativos"
+        app:layout_constraintTop_toBottomOf="@+id/iv_linux"
+        app:srcCompat="@drawable/ios" />
+
+    <ImageView
+        android:id="@+id/iv_android"
+        android:layout_width="95dp"
+        android:layout_height="49dp"
+        app:layout_constraintStart_toEndOf="@+id/rg_sistemas_operativos"
+        app:layout_constraintTop_toBottomOf="@+id/iv_ios"
+        app:srcCompat="@drawable/android" />
+
+    <ImageButton
+        android:id="@+id/img_btn_cargar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="23dp"
+        android:onClick="cargarVoto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_sistemas_operativos"
+        app:srcCompat="@android:drawable/ic_menu_save"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/tv_resultados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="25dp"
+        android:text="Resultados:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_btn_cargar" />
+
+    <TextView
+        android:id="@+id/tv_windows"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="13dp"
+        android:text="Windows:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resultados" />
+
+    <TextView
+        android:id="@+id/tv_linux"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:text="Linux:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_windows" />
+
+    <TextView
+        android:id="@+id/tv_ios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:text="iOS:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_linux" />
+
+    <TextView
+        android:id="@+id/tv_android"
+        android:layout_width="53dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="52dp"
+        android:text="Android:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ios" />
+
+    <TextView
+        android:id="@+id/tv_votos_windows"
+        android:layout_width="73dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_windows"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resultados" />
+
+    <TextView
+        android:id="@+id/tv_votos_linux"
+        android:layout_width="73dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_linux"
+        app:layout_constraintTop_toBottomOf="@+id/tv_votos_windows" />
+
+    <TextView
+        android:id="@+id/tv_votos_ios"
+        android:layout_width="73dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="36dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_ios"
+        app:layout_constraintTop_toBottomOf="@+id/tv_votos_linux" />
+
+    <TextView
+        android:id="@+id/tv_votos_android"
+        android:layout_width="73dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_android"
+        app:layout_constraintTop_toBottomOf="@+id/tv_votos_ios" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

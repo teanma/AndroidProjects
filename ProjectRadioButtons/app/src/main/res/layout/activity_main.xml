@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/rg_resoluciones"
+        android:layout_width="304dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resoluciones">
+
+        <RadioButton
+            android:id="@+id/rb_480p"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="480p" />
+
+        <RadioButton
+            android:id="@+id/rb_720p"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="720p" />
+
+        <RadioButton
+            android:id="@+id/rb_1080p"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:onClick="cargarResolucion1080"
+            android:text="1080p" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rg_sexo"
+        android:layout_width="285dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sexo">
+
+        <RadioButton
+            android:id="@+id/rb_masculino"
+            android:layout_width="142dp"
+            android:layout_height="wrap_content"
+            android:text="Masculino" />
+
+        <RadioButton
+            android:id="@+id/rb_femenino"
+            android:layout_width="144dp"
+            android:layout_height="wrap_content"
+            android:text="Femenino" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_cargar_resolucion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:onClick="cargarResolucion"
+        android:text="CARGAR RESOLUCIÓN"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_sexo" />
+
+    <TextView
+        android:id="@+id/tv_resoluciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="36dp"
+        android:text="Resoluciones"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_sexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="13dp"
+        android:text="Sexo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_resoluciones" />
+
+    <Button
+        android:id="@+id/btn_cargar_sexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="36dp"
+        android:onClick="cargarSexo"
+        android:text="CARGAR SEXO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_sexo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
