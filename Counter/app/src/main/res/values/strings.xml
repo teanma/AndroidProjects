@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Counter</string>
+    <string name="tv_contador">Contador</string>
+    <string name="et_num_cont"></string>
+    <string name="btn_suma">+</string>
+    <string name="btn_resta">-</string>
+    <string name="tb_act_desact"></string>
+    <string name="btn_reset">RESET</string>
+    <string name="et_num"></string>
+    <string name="cb_cont_neg">Conteo negativo</string>
+</resources>

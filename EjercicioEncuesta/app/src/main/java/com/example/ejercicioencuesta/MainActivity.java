@@ -14,7 +14,11 @@ public class MainActivity extends AppCompatActivity {
 
     TextView tv_votos_windows, tv_votos_linux, tv_votos_ios, tv_votos_android;
     RadioButton rb_windows, rb_linux, rb_ios, rb_android;
-    ImageButton img_btn_cargar;
+
+    private int votoWindows = 0;
+    private int votoLinux = 0;
+    private int votoIos = 0;
+    private int votoAndroid = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +34,6 @@ public class MainActivity extends AppCompatActivity {
         rb_linux = (RadioButton) findViewById(R.id.rb_linux);
         rb_ios = (RadioButton) findViewById(R.id.rb_ios);
         rb_android = (RadioButton) findViewById(R.id.rb_android);
-
-        img_btn_cargar = (ImageButton) findViewById(R.id.img_btn_cargar);
     }
 
     public void cargarVoto(View v) {
@@ -39,35 +41,23 @@ public class MainActivity extends AppCompatActivity {
         switch (rg_sistemas_operativos.getCheckedRadioButtonId()) {
             case R.id.rb_windows:
                 Toast.makeText(this, "Has votado Windows", Toast.LENGTH_SHORT).show();
-                int votoWindows = 0;
-                while (img_btn_cargar.isClickable()) {
-                    votoWindows++;
-                    tv_votos_windows.setText(votoWindows + " votos");
-                }
+                votoWindows++;
+                tv_votos_windows.setText(" " + votoWindows);
                 break;
             case R.id.rb_linux:
                 Toast.makeText(this, "Has votado Linux", Toast.LENGTH_SHORT).show();
-                int votoLinux = 0;
-                while (img_btn_cargar.isClickable()) {
-                    votoLinux++;
-                    tv_votos_linux.setText(votoLinux + " votos");
-                }
+                votoLinux++;
+                tv_votos_linux.setText(" " + votoLinux);
                 break;
             case R.id.rb_ios:
                 Toast.makeText(this, "Has votado iOs", Toast.LENGTH_SHORT).show();
-                int votoIos = 0;
-                while (img_btn_cargar.isClickable()) {
-                    votoIos++;
-                    tv_votos_ios.setText(votoIos + " votos");
-                }
+                votoIos++;
+                tv_votos_ios.setText(" " + votoIos);
                 break;
             case R.id.rb_android:
                 Toast.makeText(this, "Has votado Android", Toast.LENGTH_SHORT).show();
-                int votoAndroid = 0;
-                while (img_btn_cargar.isClickable()) {
-                    votoAndroid++;
-                    tv_votos_android.setText(votoAndroid + " votos");
-                }
+                votoAndroid++;
+                tv_votos_android.setText(" " + votoAndroid);
                 break;
         }
     }
