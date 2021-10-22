@@ -167,7 +167,6 @@
         android:id="@+id/tv_votos_linux"
         android:layout_width="73dp"
         android:layout_height="18dp"
-        android:layout_marginStart="24dp"
         app:layout_constraintStart_toEndOf="@+id/tv_linux"
         app:layout_constraintTop_toBottomOf="@+id/tv_votos_windows" />
 
@@ -175,7 +174,6 @@
         android:id="@+id/tv_votos_ios"
         android:layout_width="73dp"
         android:layout_height="19dp"
-        android:layout_marginStart="36dp"
         app:layout_constraintStart_toEndOf="@+id/tv_ios"
         app:layout_constraintTop_toBottomOf="@+id/tv_votos_linux" />
 
@@ -183,7 +181,6 @@
         android:id="@+id/tv_votos_android"
         android:layout_width="73dp"
         android:layout_height="18dp"
-        android:layout_marginStart="8dp"
         app:layout_constraintStart_toEndOf="@+id/tv_android"
         app:layout_constraintTop_toBottomOf="@+id/tv_votos_ios" />
 

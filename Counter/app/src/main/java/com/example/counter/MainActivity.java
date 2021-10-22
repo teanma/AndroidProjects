@@ -12,12 +12,10 @@ import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    protected boolean isNegative;
     EditText et_num_cont, et_num;
     Button btn_suma, btn_resta, btn_reset;
     ToggleButton tb_act_desact;
     CheckBox cb_cont_neg;
-    int num = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,24 +35,45 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void resta(View v) {
-        isNegative = num <= 0;
-        if(btn_resta.isClickable()) {
-            num = Integer.parseInt(et_num.getText().toString());
-            num--;
-            et_num_cont.setText("" + num);
-        } else if (isNegative) {
-            Toast.makeText(this, "Introduce un número positivo", Toast.LENGTH_SHORT).show();
+        et_num = (EditText) findViewById(R.id.et_num);
+        et_num_cont = (EditText) findViewById(R.id.et_num_cont);
+        int num = Integer.parseInt(et_num.getText().toString());
+        int num_cont = Integer.parseInt(et_num_cont.getText().toString());
+        num_cont -= num;
+        if (num_cont < 0) {
+            Toast.makeText(this, "No se puede poner en números negativos", Toast.LENGTH_SHORT).show();
+        } else {
+            et_num_cont.setText("" + num_cont);
         }
     }
 
     public void suma(View v) {
-        isNegative = num <= 0;
-        if(btn_suma.isClickable()) {
-            num = Integer.parseInt(et_num.getText().toString());
-            num++;
-            et_num_cont.setText("" + num);
-        } else if (isNegative) {
+        et_num = (EditText) findViewById(R.id.et_num);
+        et_num_cont = (EditText) findViewById(R.id.et_num_cont);
+        int num = Integer.parseInt(et_num.getText().toString());
+        int num_cont = Integer.parseInt(et_num_cont.getText().toString());
+        num_cont = num + num_cont;
+        et_num_cont.setText("" + num_cont);
+    }
+
+
+    public void isNegativeRes(View v) {
+        et_num = (EditText) findViewById(R.id.et_num);
+        int num = Integer.parseInt(et_num.getText().toString());
+        if (num <= 0) {
             Toast.makeText(this, "Introduce un número positivo", Toast.LENGTH_SHORT).show();
+        } else {
+            resta(v);
+        }
+    }
+
+    public void isNegativeSum(View v) {
+        et_num = (EditText) findViewById(R.id.et_num);
+        int num = Integer.parseInt(et_num.getText().toString());
+        if (num <= 0) {
+            Toast.makeText(this, "Introduce un número positivo", Toast.LENGTH_SHORT).show();
+        } else {
+            suma(v);
         }
     }
 
@@ -73,12 +92,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void resetear(View v) {
-        int reset = 0;
-        if (et_num.getText().toString().isEmpty()) {
-            Toast.makeText(this, "Introduce un número", Toast.LENGTH_SHORT).show();
-        } else {
-            et_num.setText("" + reset);
-        }
+        et_num_cont.setText("0");
     }
 
     public void ocultarResta(View v) {

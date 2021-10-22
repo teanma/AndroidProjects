@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 tv_votos_linux.setText(" " + votoLinux);
                 break;
             case R.id.rb_ios:
-                Toast.makeText(this, "Has votado iOs", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Has votado iOS", Toast.LENGTH_SHORT).show();
                 votoIos++;
                 tv_votos_ios.setText(" " + votoIos);
                 break;
