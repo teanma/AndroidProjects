@@ -31,7 +31,8 @@
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_contador"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:text="@string/et_num_cont" />
 
     <Button
         android:id="@+id/btn_resta"
@@ -39,8 +40,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="76dp"
         android:layout_marginTop="200dp"
-        android:onClick="isNegativeRes"
+        android:onClick="isEmptyRes"
         android:text="@string/btn_resta"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@string/btn_resta" />
@@ -51,8 +53,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
         android:layout_marginEnd="76dp"
-        android:onClick="isNegativeSum"
+        android:onClick="isEmptySum"
         android:text="@string/btn_suma"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@string/btn_suma" />
@@ -66,8 +69,11 @@
         android:checked="true"
         android:onClick="actDesact"
         android:text="@string/tb_act_desact"
+        android:textOff="@string/tb_act_desact_off"
+        android:textOn="@string/tb_act_desact_on"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_suma" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_suma"
+        tools:text="@string/tb_act_desact" />
 
     <Button
         android:id="@+id/btn_reset"
@@ -77,8 +83,10 @@
         android:layout_marginTop="60dp"
         android:onClick="resetear"
         android:text="@string/btn_reset"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tb_act_desact" />
+        app:layout_constraintTop_toBottomOf="@+id/tb_act_desact"
+        tools:text="@string/btn_reset" />
 
     <EditText
         android:id="@+id/et_num"
@@ -92,7 +100,8 @@
         android:textAlignment="center"
         app:layout_constraintStart_toEndOf="@+id/btn_reset"
         app:layout_constraintTop_toBottomOf="@+id/tb_act_desact"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:text="@string/et_num" />
 
     <CheckBox
         android:id="@+id/cb_cont_neg"
@@ -105,6 +114,7 @@
         android:onClick="ocultarResta"
         android:text="@string/cb_cont_neg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_suma" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_suma"
+        tools:text="@string/cb_cont_neg" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
         et_num_cont.setText("" + num_cont);
     }
 
-
     public void isNegativeRes(View v) {
         et_num = (EditText) findViewById(R.id.et_num);
         int num = Integer.parseInt(et_num.getText().toString());
@@ -74,6 +73,26 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Introduce un número positivo", Toast.LENGTH_SHORT).show();
         } else {
             suma(v);
+        }
+    }
+
+    public void isEmptyRes(View v) {
+        et_num = (EditText) findViewById(R.id.et_num);
+        String num = et_num.getText().toString();
+        if (num.isEmpty()) {
+            Toast.makeText(this, "No puede estar vacío", Toast.LENGTH_SHORT).show();
+        } else {
+            isNegativeRes(v);
+        }
+    }
+
+    public void isEmptySum(View v) {
+        et_num = (EditText) findViewById(R.id.et_num);
+        String num = et_num.getText().toString();
+        if (num.isEmpty()) {
+            Toast.makeText(this, "No puede estar vacío", Toast.LENGTH_SHORT).show();
+        } else {
+            isNegativeSum(v);
         }
     }
 

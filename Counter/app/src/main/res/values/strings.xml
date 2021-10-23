@@ -5,6 +5,8 @@
     <string name="btn_suma">+</string>
     <string name="btn_resta">-</string>
     <string name="tb_act_desact"></string>
+    <string name="tb_act_desact_on">ACTIVADO</string>
+    <string name="tb_act_desact_off">DESACTIVADO</string>
     <string name="btn_reset">RESET</string>
     <string name="et_num">1</string>
     <string name="cb_cont_neg">Conteo negativo</string>
