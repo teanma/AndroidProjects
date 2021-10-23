@@ -19,20 +19,19 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@string/tv_contador" />
 
-    <EditText
-        android:id="@+id/et_num_cont"
-        android:layout_width="84dp"
-        android:layout_height="81dp"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="25dp"
-        android:ems="10"
-        android:inputType="numberSigned"
-        android:text="@string/et_num_cont"
+    <TextView
+        android:id="@+id/tv_num_cont"
+        android:layout_width="63dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/tv_num_cont"
         android:textAlignment="center"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_contador"
-        tools:ignore="SpeakableTextPresentCheck"
-        tools:text="@string/et_num_cont" />
+        tools:ignore="TouchTargetSizeCheck"
+        tools:text="@string/tv_num_cont" />
 
     <Button
         android:id="@+id/btn_resta"
@@ -64,7 +63,7 @@
         android:id="@+id/tb_act_desact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
+        android:layout_marginStart="156dp"
         android:layout_marginTop="28dp"
         android:checked="true"
         android:onClick="actDesact"
@@ -107,14 +106,14 @@
         android:id="@+id/cb_cont_neg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="136dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="24dp"
         android:checked="true"
         android:clickable="false"
         android:onClick="ocultarResta"
         android:text="@string/cb_cont_neg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_suma"
+        app:layout_constraintTop_toBottomOf="@+id/tb_act_desact"
         tools:text="@string/cb_cont_neg" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

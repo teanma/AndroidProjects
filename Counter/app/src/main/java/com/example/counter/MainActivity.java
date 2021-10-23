@@ -7,12 +7,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText et_num_cont, et_num;
+    EditText et_num;
+    TextView tv_num_cont;
     Button btn_suma, btn_resta, btn_reset;
     ToggleButton tb_act_desact;
     CheckBox cb_cont_neg;
@@ -22,8 +24,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        et_num_cont = (EditText) findViewById(R.id.et_num_cont);
         et_num = (EditText) findViewById(R.id.et_num);
+
+        tv_num_cont = (TextView) findViewById(R.id.tv_num_cont);
 
         btn_suma = (Button) findViewById(R.id.btn_suma);
         btn_resta = (Button) findViewById(R.id.btn_resta);
@@ -36,24 +39,24 @@ public class MainActivity extends AppCompatActivity {
 
     public void resta(View v) {
         et_num = (EditText) findViewById(R.id.et_num);
-        et_num_cont = (EditText) findViewById(R.id.et_num_cont);
+        tv_num_cont = (TextView) findViewById(R.id.tv_num_cont);
         int num = Integer.parseInt(et_num.getText().toString());
-        int num_cont = Integer.parseInt(et_num_cont.getText().toString());
+        int num_cont = Integer.parseInt(tv_num_cont.getText().toString());
         num_cont -= num;
         if (num_cont < 0) {
             Toast.makeText(this, "No se puede poner en números negativos", Toast.LENGTH_SHORT).show();
         } else {
-            et_num_cont.setText("" + num_cont);
+            tv_num_cont.setText("" + num_cont);
         }
     }
 
     public void suma(View v) {
         et_num = (EditText) findViewById(R.id.et_num);
-        et_num_cont = (EditText) findViewById(R.id.et_num_cont);
+        tv_num_cont = (TextView) findViewById(R.id.tv_num_cont);
         int num = Integer.parseInt(et_num.getText().toString());
-        int num_cont = Integer.parseInt(et_num_cont.getText().toString());
+        int num_cont = Integer.parseInt(tv_num_cont.getText().toString());
         num_cont = num + num_cont;
-        et_num_cont.setText("" + num_cont);
+        tv_num_cont.setText("" + num_cont);
     }
 
     public void isNegativeRes(View v) {
@@ -111,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void resetear(View v) {
-        et_num_cont.setText("0");
+        tv_num_cont.setText("0");
     }
 
     public void ocultarResta(View v) {

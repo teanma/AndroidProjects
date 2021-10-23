@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Counter</string>
     <string name="tv_contador">Contador</string>
-    <string name="et_num_cont">0</string>
+    <string name="tv_num_cont">0</string>
     <string name="btn_suma">+</string>
     <string name="btn_resta">-</string>
     <string name="tb_act_desact"></string>
