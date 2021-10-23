@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
     public void resta(View v) {
         et_num = (EditText) findViewById(R.id.et_num);
         tv_num_cont = (TextView) findViewById(R.id.tv_num_cont);
-        int num = Integer.parseInt(et_num.getText().toString());
-        int num_cont = Integer.parseInt(tv_num_cont.getText().toString());
+        double num = Double.parseDouble(et_num.getText().toString());
+        double num_cont = Double.parseDouble(tv_num_cont.getText().toString());
         num_cont -= num;
         if (num_cont < 0) {
             Toast.makeText(this, "No se puede poner en números negativos", Toast.LENGTH_SHORT).show();
@@ -53,15 +53,15 @@ public class MainActivity extends AppCompatActivity {
     public void suma(View v) {
         et_num = (EditText) findViewById(R.id.et_num);
         tv_num_cont = (TextView) findViewById(R.id.tv_num_cont);
-        int num = Integer.parseInt(et_num.getText().toString());
-        int num_cont = Integer.parseInt(tv_num_cont.getText().toString());
+        double num = Double.parseDouble(et_num.getText().toString());
+        double num_cont = Double.parseDouble(tv_num_cont.getText().toString());
         num_cont = num + num_cont;
         tv_num_cont.setText("" + num_cont);
     }
 
     public void isNegativeRes(View v) {
         et_num = (EditText) findViewById(R.id.et_num);
-        int num = Integer.parseInt(et_num.getText().toString());
+        double num = Double.parseDouble(et_num.getText().toString());
         if (num <= 0) {
             Toast.makeText(this, "Introduce un número positivo", Toast.LENGTH_SHORT).show();
         } else {
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void isNegativeSum(View v) {
         et_num = (EditText) findViewById(R.id.et_num);
-        int num = Integer.parseInt(et_num.getText().toString());
+        double num = Double.parseDouble(et_num.getText().toString());
         if (num <= 0) {
             Toast.makeText(this, "Introduce un número positivo", Toast.LENGTH_SHORT).show();
         } else {
@@ -114,7 +114,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void resetear(View v) {
-        tv_num_cont.setText("0");
+        tv_num_cont = (TextView) findViewById(R.id.tv_num_cont);
+        double num = Double.parseDouble(tv_num_cont.getText().toString());
+        if (num == 0) {
+            Toast.makeText(this, "Ya está en cero", Toast.LENGTH_SHORT).show();
+        } else {
+            tv_num_cont.setText("0");
+        }
     }
 
     public void ocultarResta(View v) {
