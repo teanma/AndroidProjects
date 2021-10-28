@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Project_ImageView2</string>
+    <string name="cargar_imagen">CARGAR IMAGEN</string>
+    <string name="iv_frutas">frutas</string>
+    <string name="a_aguacates">a: aguacates</string>
+    <string name="c_cerezas">c: cerezas</string>
+    <string name="m_manzanas">m: manzanas</string>
+</resources>

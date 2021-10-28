@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Project_ImageView</string>
+    <string name="aguacates">AGUACATES</string>
+    <string name="manzanas">MANZANAS</string>
+    <string name="cerezas">CEREZAS</string>
+</resources>
