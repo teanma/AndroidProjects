@@ -7,12 +7,12 @@
     tools:context=".MainActivity2">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_datos_cargados"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="312dp"
-        android:text="@string/pantalla_secundaria"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/datos_cargados"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,10 +20,86 @@
         android:id="@+id/btn_volver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="60dp"
         android:onClick="cambiarActividad"
         android:text="@string/volver"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_carnet_res" />
+
+    <TextView
+        android:id="@+id/tv_nom_res"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="132dp"
+        android:text="@string/nom_res"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_ap_res"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/ap_res"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nom_res" />
+
+    <TextView
+        android:id="@+id/tv_edad_res"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/edad_res"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ap_res" />
+
+    <TextView
+        android:id="@+id/tv_carnet_res"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/dispone_de_carnet_res"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_edad_res" />
+
+    <TextView
+        android:id="@+id/tv_nom_resultado"
+        android:layout_width="123dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="46dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_datos_cargados" />
+
+    <TextView
+        android:id="@+id/tv_ap_resultado"
+        android:layout_width="124dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nom_resultado" />
+
+    <TextView
+        android:id="@+id/tv_edad_resultado"
+        android:layout_width="125dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ap_resultado" />
+
+    <TextView
+        android:id="@+id/tv_carnet_resultado"
+        android:layout_width="125dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_edad_resultado" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,4 +4,16 @@
     <string name="cambiar_actividad">Cambiar actividad</string>
     <string name="pantalla_secundaria">Pantalla secundaria</string>
     <string name="volver">VOLVER</string>
+    <string name="name">Name</string>
+    <string name="introduzca_los_datos">Introduzca los datos</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="edad">Edad</string>
+    <string name="carnet_de_conducir">Carnet de conducir</string>
+    <string name="cargar_datos">CARGAR DATOS</string>
+    <string name="datos_cargados">Datos cargados</string>
+    <string name="nom_res">Nombre:</string>
+    <string name="ap_res">Apellidos:</string>
+    <string name="edad_res">Edad:</string>
+    <string name="dispone_de_carnet_res">Dispone de carnet:</string>
 </resources>
