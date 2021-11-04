@@ -16,51 +16,45 @@ public class MainActivity extends AppCompatActivity {
     protected static final String MAINACTIVITY_AGE = "com.example.projectactivities.age";
     protected static final String MAINACTIVITY_LICENSE = "com.example.projectactivities.license";
 
+    EditText et_name, et_surname, et_age;
+    CheckBox cb_license;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        inicializar();
+    }
+
+    public void inicializar() {
+        et_name = (EditText) findViewById(R.id.et_nombre);
+        et_surname = (EditText) findViewById(R.id.et_apellidos);
+        et_age = (EditText) findViewById(R.id.et_edad);
+        cb_license = (CheckBox) findViewById(R.id.cb_carnet);
     }
 
     public void cargarDatos(View v) {
 
-        Intent pantallaSecundaria = new Intent(this, MainActivity2.class);
-        EditText et_name = (EditText) findViewById(R.id.et_nombre);
-        EditText et_surname = (EditText) findViewById(R.id.et_apellidos);
-        EditText et_age = (EditText) findViewById(R.id.et_edad);
-        CheckBox cb_license = (CheckBox) findViewById(R.id.cb_carnet);
+        String name = et_name.getText().toString();
+        String surname = et_surname.getText().toString();
+        String age = et_age.getText().toString();
+        String license = "Sí";
+        String notLicense = "No";
 
-        String message = null;
-        boolean start = false;
-        if (et_name.getText().toString().isEmpty()) {
-            message = "Introduce tu nombre";
+
+        if (name.isEmpty() || surname.isEmpty() || age.isEmpty()) {
+            Toast.makeText(this, "Rellene los campos", Toast.LENGTH_SHORT).show();
         } else {
-            String name = et_name.getText().toString();
+            Intent pantallaSecundaria = new Intent(this, MainActivity2.class);
+            if (cb_license.isChecked()) {
+                pantallaSecundaria.putExtra(MAINACTIVITY_LICENSE, license);
+            } else {
+                pantallaSecundaria.putExtra(MAINACTIVITY_LICENSE, notLicense);
+            }
             pantallaSecundaria.putExtra(MAINACTIVITY_NAME, name);
-        }
-        if (et_surname.getText().toString().isEmpty()) {
-            message += " Introduce tu apellido";
-        } else {
-            String surname = et_surname.getText().toString();
             pantallaSecundaria.putExtra(MAINACTIVITY_SURNAME, surname);
-        }
-        if (et_age.getText().toString().isEmpty()) {
-            message += " Introduce tu edad";
-        } else {
-            String age = et_age.getText().toString();
             pantallaSecundaria.putExtra(MAINACTIVITY_AGE, age);
-        }
-
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
-
-        boolean license = cb_license.isChecked();
-        pantallaSecundaria.putExtra(MAINACTIVITY_LICENSE, license);
-
-        if (!et_name.getText().toString().isEmpty() || !et_surname.getText().toString().isEmpty() || !et_age.getText().toString().isEmpty()) {
             startActivity(pantallaSecundaria);
-        } else {
-            message = null;
         }
-
     }
 }

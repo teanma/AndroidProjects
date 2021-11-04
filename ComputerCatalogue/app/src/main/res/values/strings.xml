@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ComputerCatalogue</string>
+    <string name="ib_ordenadores"></string>
+    <string name="iv_portatiles">10000</string>
+    <string name="btn_ver_portatiles">VER PORTÁTILES</string>
+    <string name="iv_sobremesas">20000</string>
+    <string name="btn_ver_sobremesas">VER SOBREMESAS</string>
+</resources>

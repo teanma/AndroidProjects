@@ -15,10 +15,11 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         Intent pantallaPrincipal = getIntent();
-        String name = getIntent().getStringExtra(MainActivity.MAINACTIVITY_NAME);
-        String surname = getIntent().getStringExtra(MainActivity.MAINACTIVITY_SURNAME);
-        String age = getIntent().getStringExtra(MainActivity.MAINACTIVITY_AGE);
-        String license = getIntent().getStringExtra(MainActivity.MAINACTIVITY_LICENSE);
+
+        String name = pantallaPrincipal.getStringExtra(MainActivity.MAINACTIVITY_NAME);
+        String surname = pantallaPrincipal.getStringExtra(MainActivity.MAINACTIVITY_SURNAME);
+        String age = pantallaPrincipal.getStringExtra(MainActivity.MAINACTIVITY_AGE);
+        String license = pantallaPrincipal.getStringExtra(MainActivity.MAINACTIVITY_LICENSE);
 
         TextView tv_name_result = (TextView) findViewById(R.id.tv_nom_resultado);
         tv_name_result.setText(name);
