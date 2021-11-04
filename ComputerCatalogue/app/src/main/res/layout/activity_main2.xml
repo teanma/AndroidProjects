@@ -6,4 +6,84 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
+    <Button
+        android:id="@+id/btn_home_portatiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="27dp"
+        android:onClick="volver"
+        android:text="@string/btn_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/btn_home" />
+
+    <ImageView
+        android:id="@+id/iv_lista_portatiles"
+        android:layout_width="207dp"
+        android:layout_height="156dp"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/iv_lista_portatiles"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_home_portatiles"
+        app:srcCompat="@drawable/portatil" />
+
+    <TextView
+        android:id="@+id/tv_lista_portatiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="22dp"
+        android:text="@string/tv_lista_portatiles"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_lista_portatiles"
+        tools:text="@string/tv_lista_portatiles" />
+
+    <ImageView
+        android:id="@+id/iv_portatil_asus"
+        android:layout_width="148dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="31dp"
+        android:contentDescription="@string/iv_portatil_asus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_lista_portatiles"
+        app:srcCompat="@drawable/portatil_asus" />
+
+    <ImageView
+        android:id="@+id/iv_portatil_thomson"
+        android:layout_width="149dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="28dp"
+        android:contentDescription="@string/iv_portatil_thomson"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_lista_portatiles"
+        app:srcCompat="@drawable/portatil_thomson" />
+
+    <Button
+        android:id="@+id/btn_detalle_asus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/btn_detalle_asus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_portatil_asus"
+        tools:ignore="DuplicateSpeakableTextCheck"
+        tools:text="@string/btn_detalle_asus" />
+
+    <Button
+        android:id="@+id/btn_detalle_thomson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/btn_detalle_thomson"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_portatil_thomson"
+        tools:text="@string/btn_detalle_thomson" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

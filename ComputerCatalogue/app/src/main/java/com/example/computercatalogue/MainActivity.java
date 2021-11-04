@@ -63,9 +63,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void mostrarPortatiles(View v) {
+
+        String codigoPortatil = "10000";
+
         Intent pantallaSecundaria = new Intent(this, MainActivity2.class);
+        pantallaSecundaria.putExtra(MAINACTIVITY_PORTATILES, codigoPortatil);
+        startActivity(pantallaSecundaria);
     }
 
     public void mostrarSobremesas(View v) {
+
+        String codigoSobremesa = "20000";
+
+        Intent pantallaTernaria = new Intent(this, MainActivity3.class);
+        pantallaTernaria.putExtra(MAINACTIVITY_SOBREMESAS, codigoSobremesa);
+        startActivity(pantallaTernaria);
     }
 }

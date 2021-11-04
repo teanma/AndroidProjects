@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3">
+
+    <Button
+        android:id="@+id/btn_home_sobremesas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="16dp"
+        android:onClick="volver"
+        android:text="@string/btn_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/btn_home" />
+
+    <ImageView
+        android:id="@+id/iv_lista_sobremesas"
+        android:layout_width="164dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="11dp"
+        android:contentDescription="@string/iv_lista_sobremesas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_home_sobremesas"
+        app:srcCompat="@drawable/sobremesa" />
+
+    <TextView
+        android:id="@+id/tv_lista_sobremesas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/tv_lista_sobremesas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_lista_sobremesas" />
+
+    <ImageView
+        android:id="@+id/iv_sobremesa_dell"
+        android:layout_width="168dp"
+        android:layout_height="201dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="17dp"
+        android:contentDescription="@string/iv_sobremesa_dell"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_lista_sobremesas"
+        app:srcCompat="@drawable/sobremesa_dell" />
+
+    <ImageView
+        android:id="@+id/iv_sobremesa_hp"
+        android:layout_width="167dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="29dp"
+        android:contentDescription="@string/iv_sobremesa_hp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_lista_sobremesas"
+        app:srcCompat="@drawable/sobremesa_hp" />
+
+    <Button
+        android:id="@+id/btn_detalle_dell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/btn_detalle_dell"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_sobremesa_dell"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/btn_detalle_hp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="41dp"
+        android:text="@string/btn_detalle_hp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_sobremesa_hp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
