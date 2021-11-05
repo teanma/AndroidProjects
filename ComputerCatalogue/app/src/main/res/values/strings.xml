@@ -21,4 +21,16 @@
     <string name="iv_sobremesa_hp">20000–2</string>
     <string name="btn_detalle_dell">VER DETALLE</string>
     <string name="btn_detalle_hp">VER DETALLE</string>
+    //MainActivity4
+    <string name="tv_ruta_portátiles">></string>
+    <string name="btn_portátiles">PORTÁTILES</string>
+    <string name="iv_detalle_portátiles">10000</string>
+    <string name="tv_nombre"></string>
+    <string name="tv_precio"></string>
+    <string name="tv_marca">Marca:</string>
+    <string name="tv_codigo">Código:</string>
+    <string name="tv_cantidad">Cantidad:</string>
+    <string name="tv_res_marca"></string>
+    <string name="tv_res_código"></string>
+    <string name="tv_res_cantidad"></string>
 </resources>

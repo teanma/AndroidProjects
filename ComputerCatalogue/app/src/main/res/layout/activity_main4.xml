@@ -6,4 +6,115 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity4">
 
+    <Button
+        android:id="@+id/btn_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/btn_home"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="68dp" />
+
+    <TextView
+        android:id="@+id/tv_ruta_portatiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_ruta_portátiles"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="31dp" />
+
+    <Button
+        android:id="@+id/btn_portatiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/btn_portátiles"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="240dp" />
+
+    <ImageView
+        android:id="@+id/iv_detalle_portatiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/iv_detalle_portátiles"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/portatil"
+        tools:layout_editor_absoluteY="98dp" />
+
+    <TextView
+        android:id="@+id/tv_nombre"
+        android:layout_width="344dp"
+        android:layout_height="49dp"
+        android:text="@string/tv_nombre"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.474"
+        tools:layout_editor_absoluteX="33dp" />
+
+    <TextView
+        android:id="@+id/tv_precio"
+        android:layout_width="102dp"
+        android:layout_height="29dp"
+        android:text="@string/tv_precio"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="377dp" />
+
+    <TextView
+        android:id="@+id/tv_marca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_marca"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="415dp" />
+
+    <TextView
+        android:id="@+id/tv_codigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_codigo"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="455dp" />
+
+    <TextView
+        android:id="@+id/tv_cantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_cantidad"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="492dp" />
+
+    <TextView
+        android:id="@+id/tv_res_marca"
+        android:layout_width="69dp"
+        android:layout_height="18dp"
+        android:contentDescription="@string/tv_res_marca"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="416dp" />
+
+    <TextView
+        android:id="@+id/tv_res_codigo"
+        android:layout_width="71dp"
+        android:layout_height="18dp"
+        android:contentDescription="@string/tv_res_código"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="455dp" />
+
+    <TextView
+        android:id="@+id/tv_res_cantidad"
+        android:layout_width="69dp"
+        android:layout_height="18dp"
+        android:contentDescription="@string/tv_res_cantidad"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="493dp" />
+
+    <Button
+        android:id="@+id/btn_añadir_carrito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="545dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

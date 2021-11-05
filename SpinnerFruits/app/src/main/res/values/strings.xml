@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SpinnerFruits</string>
+    <string name="iv_fruta">Frutas</string>
+    <string name="btn_mostrar">Mostrar</string>
+</resources>
