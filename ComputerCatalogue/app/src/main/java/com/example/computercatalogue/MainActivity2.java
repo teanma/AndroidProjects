@@ -12,6 +12,7 @@ import android.widget.TextView;
 public class MainActivity2 extends AppCompatActivity {
 
     protected static final String MAINACTIVITY_PORTATILES_10000 = "com.example.computercatalogue.portatiles_10000";
+    protected static final String MAINACTIVITY_CATEGORIA_PORTATILES = "com.example.computercatalogue.categoria_portatiles";
     protected static final String MAINACTIVITY2_PORTATIL_ASUS_10000_1 = "com.example.computercatalogue.codigo_portatil";
     protected static final String MAINACTIVITY2_PORTATIL_THOMSON_10000_2 = "com.example.computercatalogue.codigo_portatil";
 
@@ -28,11 +29,13 @@ public class MainActivity2 extends AppCompatActivity {
 
     public void verDetalleAsus(View v) {
 
+        String categoria = "Portátiles";
         String codigoAsus = "10000_1";
         String codigoPortatil = "10000";
 
         Intent pantallaDetalleAsus = new Intent(this, MainActivity4.class);
 
+        pantallaDetalleAsus.putExtra(MAINACTIVITY_CATEGORIA_PORTATILES, categoria);
         pantallaDetalleAsus.putExtra(MAINACTIVITY2_PORTATIL_ASUS_10000_1, codigoAsus);
         pantallaDetalleAsus.putExtra(MAINACTIVITY_PORTATILES_10000, codigoPortatil);
 
@@ -41,11 +44,13 @@ public class MainActivity2 extends AppCompatActivity {
 
     public void verDetalleThomson(View v) {
 
+        String categoria = "Portátiles";
         String codigoThomson = "10000_2";
         String codigoPortatil = "10000";
 
         Intent pantallaDetalleThomson = new Intent(this, MainActivity4.class);
 
+        pantallaDetalleThomson.putExtra(MAINACTIVITY_CATEGORIA_PORTATILES, categoria);
         pantallaDetalleThomson.putExtra(MAINACTIVITY2_PORTATIL_THOMSON_10000_2, codigoThomson);
         pantallaDetalleThomson.putExtra(MAINACTIVITY_PORTATILES_10000, codigoPortatil);
 

@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class MainActivity5 extends AppCompatActivity {
 
     Button btn_home, btn_sobremesas;
-    TextView tv_nombre, tv_precio, tv_res_marca, tv_res_codigo, tv_res_cantidad;
+    TextView tv_nombre, tv_precio, tv_res_categoria, tv_res_codigo, tv_res_codigo_producto, tv_res_modelo, tv_res_stock;
     ImageView iv_detalle_sobremesa;
 
 
@@ -24,32 +24,40 @@ public class MainActivity5 extends AppCompatActivity {
 
         Intent intent = getIntent();
 
+        String codigoSobremesa = intent.getStringExtra(MainActivity.MAINACTIVITY_SOBREMESAS_20000);
+        String categoriaSombremesa = intent.getStringExtra(MainActivity.MAINACTIVITY_CATEGORIA_SOBREMESAS);
         String codigoDell = intent.getStringExtra(MainActivity3.MAINACTIVITY3_SOBREMESA_DELL_20000_1);
         String codigoHp = intent.getStringExtra(MainActivity3.MAINACTIVITY3_SOBREMESA_HP_20000_2);
 
         if(codigoDell.equals("20000_1")) {
+            iv_detalle_sobremesa.setImageResource(R.drawable.sobremesa_dell);
             String nombre = "Dell Ordenador Sobremesa CGRR2 i3-10105/8GB/256GB SSD";
             String precio = "547.99$";
-            String marca = "Dell";
-            String cantidad = "1";
+            String modelo = "CGRR2";
+            String stock = "5";
 
             tv_nombre.setText(nombre);
             tv_precio.setText(precio);
-            tv_res_marca.setText(marca);
-            tv_res_codigo.setText(codigoDell);
-            tv_res_cantidad.setText(cantidad);
+            tv_res_categoria.setText(categoriaSombremesa);
+            tv_res_codigo.setText(codigoSobremesa);
+            tv_res_codigo_producto.setText(codigoDell);
+            tv_res_modelo.setText(modelo);
+            tv_res_stock.setText(stock);
         }
         if(codigoHp.equals("20000_2")) {
+            iv_detalle_sobremesa.setImageResource(R.drawable.sobremesa_hp);
             String nombre = "HP Ordenador Sobremesa 290 G3 SFF i5-10500/8GB/256GB SSD";
             String precio = "637.99$";
-            String marca = "HP";
-            String cantidad = "1";
+            String modelo = "290 G3 SFF";
+            String stock = "6";
 
             tv_nombre.setText(nombre);
             tv_precio.setText(precio);
-            tv_res_marca.setText(marca);
-            tv_res_codigo.setText(codigoHp);
-            tv_res_cantidad.setText(cantidad);
+            tv_res_categoria.setText(categoriaSombremesa);
+            tv_res_codigo.setText(codigoSobremesa);
+            tv_res_codigo_producto.setText(codigoHp);
+            tv_res_modelo.setText(modelo);
+            tv_res_stock.setText(stock);
         }
     }
 
@@ -60,9 +68,11 @@ public class MainActivity5 extends AppCompatActivity {
 
         tv_nombre = (TextView) findViewById(R.id.tv_nombre_sobremesa);
         tv_precio = (TextView) findViewById(R.id.tv_precio_sobremesa);
-        tv_res_marca = (TextView) findViewById(R.id.tv_res_marca_sobremesa);
+        tv_res_categoria = (TextView) findViewById(R.id.tv_res_categoria_sobremesa);
         tv_res_codigo = (TextView) findViewById(R.id.tv_res_codigo_sobremesa);
-        tv_res_cantidad = (TextView) findViewById(R.id.tv_res_cantidad_sobremesa);
+        tv_res_codigo_producto = (TextView) findViewById(R.id.tv_res_codigo_producto_sobremesa);
+        tv_res_modelo = (TextView) findViewById(R.id.tv_res_modelo_sobremesa);
+        tv_res_stock = (TextView) findViewById(R.id.tv_res_stock_sobremesa);
 
         iv_detalle_sobremesa = (ImageView) findViewById(R.id.iv_detalle_sobremesa);
     }

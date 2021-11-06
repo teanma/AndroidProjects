@@ -13,7 +13,9 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     protected static final String MAINACTIVITY_PORTATILES_10000 = "com.example.computercatalogue.portatiles_10000";
+    protected static final String MAINACTIVITY_CATEGORIA_PORTATILES = "com.example.computercatalogue.categoria_portatiles";
     protected static final String MAINACTIVITY_SOBREMESAS_20000 = "com.example.computercatalogue.sobremesas_20000";
+    protected static final String MAINACTIVITY_CATEGORIA_SOBREMESAS = "com.example.computercatalogue.categoria_sobremesas";
 
     ImageButton ib_ordenadores;
     ImageView iv_portatiles, iv_sobremesas;
@@ -65,18 +67,22 @@ public class MainActivity extends AppCompatActivity {
     public void mostrarPortatiles(View v) {
 
         String codigoPortatil = "10000";
+        String categoria = "Portátiles";
 
         Intent pantallaSecundaria = new Intent(this, MainActivity2.class);
         pantallaSecundaria.putExtra(MAINACTIVITY_PORTATILES_10000, codigoPortatil);
+        pantallaSecundaria.putExtra(MAINACTIVITY_CATEGORIA_PORTATILES, categoria);
         startActivity(pantallaSecundaria);
     }
 
     public void mostrarSobremesas(View v) {
 
         String codigoSobremesa = "20000";
+        String categoria = "Sobremesas";
 
         Intent pantallaTernaria = new Intent(this, MainActivity3.class);
         pantallaTernaria.putExtra(MAINACTIVITY_SOBREMESAS_20000, codigoSobremesa);
+        pantallaTernaria.putExtra(MAINACTIVITY_CATEGORIA_SOBREMESAS, categoria);
         startActivity(pantallaTernaria);
     }
 }

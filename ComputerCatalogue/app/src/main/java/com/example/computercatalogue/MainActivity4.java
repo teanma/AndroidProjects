@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class MainActivity4 extends AppCompatActivity {
 
     Button btn_home, btn_portatiles;
-    TextView tv_nombre, tv_precio, tv_res_marca, tv_res_codigo, tv_res_cantidad;
+    TextView tv_nombre, tv_precio, tv_res_categoria, tv_res_codigo, tv_res_codigo_producto, tv_res_modelo, tv_res_stock;
     ImageView iv_detalle_portatil;
 
     @Override
@@ -23,32 +23,40 @@ public class MainActivity4 extends AppCompatActivity {
 
         Intent intent = getIntent();
 
+        String codigoPortatil = intent.getStringExtra(MainActivity.MAINACTIVITY_PORTATILES_10000);
+        String categoriaPortatil = intent.getStringExtra(MainActivity.MAINACTIVITY_CATEGORIA_PORTATILES);
         String codigoAsus = intent.getStringExtra(MainActivity2.MAINACTIVITY2_PORTATIL_ASUS_10000_1);
         String codigoThomson = intent.getStringExtra(MainActivity2.MAINACTIVITY2_PORTATIL_THOMSON_10000_2);
 
         if(codigoAsus.equals("10000_1")) {
+            iv_detalle_portatil.setImageResource(R.drawable.portatil_asus);
             String nombre = "Asus E410MA-EK007TS, 14'' FHD, Intel® Celeron® N4020, 4 GB RAM, 64 GB eMMC, Graphics 600, W10S";
             String precio = "284$";
-            String marca = "Asus";
-            String cantidad = "1";
+            String modelo = "E410MA-EK007TS";
+            String stock = "3";
 
             tv_nombre.setText(nombre);
             tv_precio.setText(precio);
-            tv_res_marca.setText(marca);
-            tv_res_codigo.setText(codigoAsus);
-            tv_res_cantidad.setText(cantidad);
+            tv_res_categoria.setText(categoriaPortatil);
+            tv_res_codigo.setText(codigoPortatil);
+            tv_res_codigo_producto.setText(codigoAsus);
+            tv_res_modelo.setText(modelo);
+            tv_res_stock.setText(stock);
         }
         if(codigoThomson.equals("10000_2")) {
+            iv_detalle_portatil.setImageResource(R.drawable.portatil_thomson);
             String nombre = "Thomson NEO Z3, 12.5 pulgadas FHD, LTE 4G, Qualcomm® Snapdragon™ 850, 8GB RAM, 256GB Flash, Adreno 630, W10";
             String precio = "399$";
-            String marca = "Thomson";
-            String cantidad = "1";
+            String modelo = "NEO Z3";
+            String stock = "4";
 
             tv_nombre.setText(nombre);
             tv_precio.setText(precio);
-            tv_res_marca.setText(marca);
-            tv_res_codigo.setText(codigoThomson);
-            tv_res_cantidad.setText(cantidad);
+            tv_res_categoria.setText(categoriaPortatil);
+            tv_res_codigo.setText(codigoPortatil);
+            tv_res_codigo_producto.setText(codigoThomson);
+            tv_res_modelo.setText(modelo);
+            tv_res_stock.setText(stock);
         }
     }
 
@@ -59,9 +67,11 @@ public class MainActivity4 extends AppCompatActivity {
 
         tv_nombre = (TextView) findViewById(R.id.tv_nombre_portatil);
         tv_precio = (TextView) findViewById(R.id.tv_precio_portatil);
-        tv_res_marca = (TextView) findViewById(R.id.tv_res_marca_portatil);
+        tv_res_categoria = (TextView) findViewById(R.id.tv_res_categoria_portatil);
         tv_res_codigo = (TextView) findViewById(R.id.tv_res_codigo_portatil);
-        tv_res_cantidad = (TextView) findViewById(R.id.tv_res_cantidad_portatil);
+        tv_res_codigo_producto = (TextView) findViewById(R.id.tv_res_codigo_producto_portatil);
+        tv_res_modelo = (TextView) findViewById(R.id.tv_res_modelo_portatil);
+        tv_res_stock = (TextView) findViewById(R.id.tv_res_stock_portatil);
 
         iv_detalle_portatil = (ImageView) findViewById(R.id.iv_detalle_portatil);
     }

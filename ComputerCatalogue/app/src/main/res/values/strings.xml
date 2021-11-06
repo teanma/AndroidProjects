@@ -31,11 +31,13 @@
     <string name="iv_detalle_sobremesa">20000</string>
     <string name="tv_nombre"></string>
     <string name="tv_precio"></string>
-    <string name="tv_marca">Marca:</string>
+    <string name="tv_categoria">Categoría:</string>
     <string name="tv_codigo">Código:</string>
-    <string name="tv_cantidad">Cantidad:</string>
-    <string name="tv_res_marca"></string>
-    <string name="tv_res_código"></string>
-    <string name="tv_res_cantidad"></string>
+    <string name="tv_codigo_producto">Producto:</string>
+    <string name="tv_modelo">Modelo:</string>
+    <string name="tv_stock">Stock:</string>
+    <string name="tv_res_modelo"></string>
+    <string name="tv_res_codigo"></string>
+    <string name="tv_res_stock"></string>
     <string name="btn_añadir_carrito">AÑADIR AL CARRITO</string>
 </resources>
