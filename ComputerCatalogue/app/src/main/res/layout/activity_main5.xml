@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity5">
+
+    <TextView
+        android:id="@+id/tv_res_cantidad_sobremesa"
+        android:layout_width="115dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="169dp"
+        android:contentDescription="@string/tv_res_marca"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_res_codigo_sobremesa" />
+
+    <TextView
+        android:id="@+id/tv_res_codigo_sobremesa"
+        android:layout_width="115dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="169dp"
+        android:contentDescription="@string/tv_res_marca"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_res_marca_sobremesa" />
+
+    <TextView
+        android:id="@+id/tv_res_marca_sobremesa"
+        android:layout_width="115dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="169dp"
+        android:contentDescription="@string/tv_res_marca"
+        android:textColor="@android:color/holo_orange_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_precio_sobremesa" />
+
+    <Button
+        android:id="@+id/btn_añadir_carrito_sobremesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="19dp"
+        android:text="@string/btn_añadir_carrito"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_res_cantidad_sobremesa" />
+
+    <TextView
+        android:id="@+id/tv_cantidad_sobremesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="14dp"
+        android:text="@string/tv_cantidad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_codigo_sobremesa" />
+
+    <TextView
+        android:id="@+id/tv_codigo_sobremesa"
+        android:layout_width="45dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/tv_codigo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_marca_sobremesa" />
+
+    <TextView
+        android:id="@+id/tv_marca_sobremesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="14dp"
+        android:text="@string/tv_marca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_precio_sobremesa" />
+
+    <TextView
+        android:id="@+id/tv_precio_sobremesa"
+        android:layout_width="102dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tv_precio"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nombre_sobremesa" />
+
+    <TextView
+        android:id="@+id/tv_nombre_sobremesa"
+        android:layout_width="343dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="23dp"
+        android:text="@string/tv_nombre"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_detalle_sobremesa" />
+
+    <ImageView
+        android:id="@+id/iv_detalle_sobremesa"
+        android:layout_width="216dp"
+        android:layout_height="204dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/iv_detalle_portátil"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_home_sobremesa"
+        app:srcCompat="@drawable/sobremesa" />
+
+    <Button
+        android:id="@+id/btn_sobremesas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="56dp"
+        android:onClick="volverASobremesas"
+        android:text="@string/btn_sobremesas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_ruta_sobremesas"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/tv_ruta_portátiles"
+        app:layout_constraintStart_toEndOf="@+id/btn_home_sobremesa"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_home_sobremesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="16dp"
+        android:onClick="volverAHome"
+        android:text="@string/btn_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

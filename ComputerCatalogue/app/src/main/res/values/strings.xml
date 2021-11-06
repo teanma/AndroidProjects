@@ -6,8 +6,9 @@
     <string name="btn_ver_portatiles">VER PORTÁTILES</string>
     <string name="iv_sobremesas">20000</string>
     <string name="btn_ver_sobremesas">VER SOBREMESAS</string>
-    //MainActivity2
+    //MainActivity 2, 3, 4 y 5
     <string name="btn_home">HOME</string>
+    //MainActivity2
     <string name="iv_lista_portatiles"></string>
     <string name="tv_lista_portatiles">Lista de portátiles</string>
     <string name="iv_portatil_asus">10000–1</string>
@@ -21,10 +22,13 @@
     <string name="iv_sobremesa_hp">20000–2</string>
     <string name="btn_detalle_dell">VER DETALLE</string>
     <string name="btn_detalle_hp">VER DETALLE</string>
-    //MainActivity4
+    //MainActivity 4 y 5
     <string name="tv_ruta_portátiles">></string>
+    <string name="tv_ruta_sobremesas">></string>
     <string name="btn_portátiles">PORTÁTILES</string>
-    <string name="iv_detalle_portátiles">10000</string>
+    <string name="btn_sobremesas">SOBREMESAS</string>
+    <string name="iv_detalle_portátil">10000</string>
+    <string name="iv_detalle_sobremesa">20000</string>
     <string name="tv_nombre"></string>
     <string name="tv_precio"></string>
     <string name="tv_marca">Marca:</string>
@@ -33,4 +37,5 @@
     <string name="tv_res_marca"></string>
     <string name="tv_res_código"></string>
     <string name="tv_res_cantidad"></string>
+    <string name="btn_añadir_carrito">AÑADIR AL CARRITO</string>
 </resources>
