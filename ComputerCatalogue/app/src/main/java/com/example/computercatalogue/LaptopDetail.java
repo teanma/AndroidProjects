@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity4 extends AppCompatActivity {
+public class LaptopDetail extends AppCompatActivity {
 
     Button btn_home, btn_portatiles;
     TextView tv_nombre, tv_precio, tv_res_categoria, tv_res_codigo, tv_res_codigo_producto, tv_res_modelo, tv_res_stock;
@@ -18,15 +18,35 @@ public class MainActivity4 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main4);
+        setContentView(R.layout.laptop_detail);
         inicializar();
+        mostrarDetalle();
+    }
+
+    public void inicializar() {
+
+        btn_home = (Button) findViewById(R.id.btn_home_portatil);
+        btn_portatiles = (Button) findViewById(R.id.btn_portatiles);
+
+        tv_nombre = (TextView) findViewById(R.id.tv_nombre_portatil);
+        tv_precio = (TextView) findViewById(R.id.tv_precio_portatil);
+        tv_res_categoria = (TextView) findViewById(R.id.tv_res_categoria_portatil);
+        tv_res_codigo = (TextView) findViewById(R.id.tv_res_codigo_portatil);
+        tv_res_codigo_producto = (TextView) findViewById(R.id.tv_res_codigo_producto_portatil);
+        tv_res_modelo = (TextView) findViewById(R.id.tv_res_modelo_portatil);
+        tv_res_stock = (TextView) findViewById(R.id.tv_res_stock_portatil);
+
+        iv_detalle_portatil = (ImageView) findViewById(R.id.iv_detalle_portatil);
+    }
+
+    public void mostrarDetalle() {
 
         Intent intent = getIntent();
 
-        String codigoPortatil = intent.getStringExtra(MainActivity.MAINACTIVITY_PORTATILES_10000);
-        String categoriaPortatil = intent.getStringExtra(MainActivity.MAINACTIVITY_CATEGORIA_PORTATILES);
-        String codigoAsus = intent.getStringExtra(MainActivity2.MAINACTIVITY2_PORTATIL_ASUS_10000_1);
-        String codigoThomson = intent.getStringExtra(MainActivity2.MAINACTIVITY2_PORTATIL_THOMSON_10000_2);
+        String codigoPortatil = intent.getStringExtra(ComputerCatalogue.COMPUTERCATALOGUE_PORTATILES_10000);
+        String categoriaPortatil = intent.getStringExtra(ComputerCatalogue.COMPUTERCATALOGUE_CATEGORIA_PORTATILES);
+        String codigoAsus = intent.getStringExtra(LaptopCatalogue.LAPTOPCATALOGUE_PORTATIL_ASUS_10000_1);
+        String codigoThomson = intent.getStringExtra(LaptopCatalogue.LAPTOPCATALOGUE_PORTATIL_THOMSON_10000_2);
 
         if(codigoAsus.equals("10000_1")) {
             iv_detalle_portatil.setImageResource(R.drawable.portatil_asus);
@@ -60,29 +80,13 @@ public class MainActivity4 extends AppCompatActivity {
         }
     }
 
-    public void inicializar() {
-
-        btn_home = (Button) findViewById(R.id.btn_home_portatil);
-        btn_portatiles = (Button) findViewById(R.id.btn_portatiles);
-
-        tv_nombre = (TextView) findViewById(R.id.tv_nombre_portatil);
-        tv_precio = (TextView) findViewById(R.id.tv_precio_portatil);
-        tv_res_categoria = (TextView) findViewById(R.id.tv_res_categoria_portatil);
-        tv_res_codigo = (TextView) findViewById(R.id.tv_res_codigo_portatil);
-        tv_res_codigo_producto = (TextView) findViewById(R.id.tv_res_codigo_producto_portatil);
-        tv_res_modelo = (TextView) findViewById(R.id.tv_res_modelo_portatil);
-        tv_res_stock = (TextView) findViewById(R.id.tv_res_stock_portatil);
-
-        iv_detalle_portatil = (ImageView) findViewById(R.id.iv_detalle_portatil);
-    }
-
     public void volverAHome(View v) {
-        Intent pantallaPrincipal = new Intent(this, MainActivity.class);
+        Intent pantallaPrincipal = new Intent(this, ComputerCatalogue.class);
         startActivity(pantallaPrincipal);
     }
 
     public void volverAPortatiles(View v) {
-        Intent pantallaPortatiles = new Intent(this, MainActivity2.class);
+        Intent pantallaPortatiles = new Intent(this, LaptopCatalogue.class);
         startActivity(pantallaPortatiles);
     }
 }

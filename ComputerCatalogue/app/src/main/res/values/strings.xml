@@ -1,28 +1,28 @@
 <resources>
-    //MainActivity1
+    //ComputerCatalogue
     <string name="app_name">ComputerCatalogue</string>
     <string name="ib_ordenadores"></string>
-    <string name="iv_portatiles">10000</string>
+    <string name="ib_portatiles">10000</string>
     <string name="btn_ver_portatiles">VER PORTÁTILES</string>
-    <string name="iv_sobremesas">20000</string>
+    <string name="ib_sobremesas">20000</string>
     <string name="btn_ver_sobremesas">VER SOBREMESAS</string>
-    //MainActivity 2, 3, 4 y 5
+    //Catalogue (Laptop and Desktop), Detail (Laptop and Desktop)
     <string name="btn_home">HOME</string>
-    //MainActivity2
+    //LaptopCatalogue
     <string name="iv_lista_portatiles"></string>
     <string name="tv_lista_portatiles">Lista de portátiles</string>
     <string name="iv_portatil_asus">10000–1</string>
     <string name="iv_portatil_thomson">10000–2</string>
     <string name="btn_detalle_asus">VER DETALLE</string>
     <string name="btn_detalle_thomson">VER DETALLE</string>
-    //MainActivity3
+    //DesktopCataogue
     <string name="iv_lista_sobremesas"></string>
     <string name="tv_lista_sobremesas">Lista de sobremesas</string>
     <string name="iv_sobremesa_dell">20000–1</string>
     <string name="iv_sobremesa_hp">20000–2</string>
     <string name="btn_detalle_dell">VER DETALLE</string>
     <string name="btn_detalle_hp">VER DETALLE</string>
-    //MainActivity 4 y 5
+    //Detail (Laptop and Desktop)
     <string name="tv_ruta_portátiles">></string>
     <string name="tv_ruta_sobremesas">></string>
     <string name="btn_portátiles">PORTÁTILES</string>

@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity5 extends AppCompatActivity {
+public class DesktopDetail extends AppCompatActivity {
 
     Button btn_home, btn_sobremesas;
     TextView tv_nombre, tv_precio, tv_res_categoria, tv_res_codigo, tv_res_codigo_producto, tv_res_modelo, tv_res_stock;
@@ -19,15 +19,35 @@ public class MainActivity5 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main5);
+        setContentView(R.layout.computer_detail);
         inicializar();
+        mostrarDetalle();
+    }
+
+    public void inicializar() {
+
+        btn_home = (Button) findViewById(R.id.btn_home_sobremesa);
+        btn_sobremesas = (Button) findViewById(R.id.btn_sobremesas);
+
+        tv_nombre = (TextView) findViewById(R.id.tv_nombre_sobremesa);
+        tv_precio = (TextView) findViewById(R.id.tv_precio_sobremesa);
+        tv_res_categoria = (TextView) findViewById(R.id.tv_res_categoria_sobremesa);
+        tv_res_codigo = (TextView) findViewById(R.id.tv_res_codigo_sobremesa);
+        tv_res_codigo_producto = (TextView) findViewById(R.id.tv_res_codigo_producto_sobremesa);
+        tv_res_modelo = (TextView) findViewById(R.id.tv_res_modelo_sobremesa);
+        tv_res_stock = (TextView) findViewById(R.id.tv_res_stock_sobremesa);
+
+        iv_detalle_sobremesa = (ImageView) findViewById(R.id.iv_detalle_sobremesa);
+    }
+
+    public void mostrarDetalle() {
 
         Intent intent = getIntent();
 
-        String codigoSobremesa = intent.getStringExtra(MainActivity.MAINACTIVITY_SOBREMESAS_20000);
-        String categoriaSombremesa = intent.getStringExtra(MainActivity.MAINACTIVITY_CATEGORIA_SOBREMESAS);
-        String codigoDell = intent.getStringExtra(MainActivity3.MAINACTIVITY3_SOBREMESA_DELL_20000_1);
-        String codigoHp = intent.getStringExtra(MainActivity3.MAINACTIVITY3_SOBREMESA_HP_20000_2);
+        String codigoSobremesa = intent.getStringExtra(ComputerCatalogue.COMPUTERCATALOGUE_SOBREMESAS_20000);
+        String categoriaSombremesa = intent.getStringExtra(ComputerCatalogue.COMPUTERCATALOGUE_CATEGORIA_SOBREMESAS);
+        String codigoDell = intent.getStringExtra(DesktopCatalogue.DESKTOPCATALOGUE_SOBREMESA_DELL_20000_1);
+        String codigoHp = intent.getStringExtra(DesktopCatalogue.DESKTOPCATALOGUE_SOBREMESA_HP_20000_2);
 
         if(codigoDell.equals("20000_1")) {
             iv_detalle_sobremesa.setImageResource(R.drawable.sobremesa_dell);
@@ -61,29 +81,13 @@ public class MainActivity5 extends AppCompatActivity {
         }
     }
 
-    public void inicializar() {
-
-        btn_home = (Button) findViewById(R.id.btn_home_sobremesa);
-        btn_sobremesas = (Button) findViewById(R.id.btn_sobremesas);
-
-        tv_nombre = (TextView) findViewById(R.id.tv_nombre_sobremesa);
-        tv_precio = (TextView) findViewById(R.id.tv_precio_sobremesa);
-        tv_res_categoria = (TextView) findViewById(R.id.tv_res_categoria_sobremesa);
-        tv_res_codigo = (TextView) findViewById(R.id.tv_res_codigo_sobremesa);
-        tv_res_codigo_producto = (TextView) findViewById(R.id.tv_res_codigo_producto_sobremesa);
-        tv_res_modelo = (TextView) findViewById(R.id.tv_res_modelo_sobremesa);
-        tv_res_stock = (TextView) findViewById(R.id.tv_res_stock_sobremesa);
-
-        iv_detalle_sobremesa = (ImageView) findViewById(R.id.iv_detalle_sobremesa);
-    }
-
     public void volverAHome(View v) {
-        Intent pantallaPrincipal = new Intent(this, MainActivity.class);
+        Intent pantallaPrincipal = new Intent(this, ComputerCatalogue.class);
         startActivity(pantallaPrincipal);
     }
 
     public void volverASobremesas(View v) {
-        Intent pantallaSobremesas = new Intent(this, MainActivity3.class);
+        Intent pantallaSobremesas = new Intent(this, DesktopCatalogue.class);
         startActivity(pantallaSobremesas);
     }
 }

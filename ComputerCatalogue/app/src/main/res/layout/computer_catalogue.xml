@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ComputerCatalogue">
 
     <ImageButton
         android:id="@+id/ib_ordenadores"
@@ -20,17 +20,6 @@
         app:srcCompat="@drawable/ordenadores"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageView
-        android:id="@+id/iv_portatiles"
-        android:layout_width="198dp"
-        android:layout_height="97dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="32dp"
-        android:contentDescription="@string/iv_portatiles"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ib_ordenadores"
-        app:srcCompat="@drawable/portatil" />
-
     <Button
         android:id="@+id/btn_ver_portatiles"
         android:layout_width="wrap_content"
@@ -40,29 +29,44 @@
         android:onClick="mostrarPortatiles"
         android:text="@string/btn_ver_portatiles"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_portatiles"
+        app:layout_constraintTop_toBottomOf="@+id/ib_portatiles"
         tools:ignore="DuplicateSpeakableTextCheck" />
-
-    <ImageView
-        android:id="@+id/iv_sobremesas"
-        android:layout_width="189dp"
-        android:layout_height="158dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="16dp"
-        android:contentDescription="@string/iv_sobremesas"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_ver_portatiles"
-        app:srcCompat="@drawable/sobremesa" />
 
     <Button
         android:id="@+id/btn_ver_sobremesas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="10dp"
         android:onClick="mostrarSobremesas"
         android:text="@string/btn_ver_sobremesas"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_sobremesas" />
+        app:layout_constraintTop_toBottomOf="@+id/ib_sobremesas" />
+
+    <ImageButton
+        android:id="@+id/ib_portatiles"
+        android:layout_width="175dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="17dp"
+        android:contentDescription="@string/ib_portatiles"
+        android:onClick="mostrarPortatiles"
+        android:scaleType="fitCenter"
+        android:src="@drawable/portatil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ib_ordenadores" />
+
+    <ImageButton
+        android:id="@+id/ib_sobremesas"
+        android:layout_width="231dp"
+        android:layout_height="163dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="13dp"
+        android:contentDescription="@string/ib_sobremesas"
+        android:onClick="mostrarSobremesas"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sobremesa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ver_portatiles" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

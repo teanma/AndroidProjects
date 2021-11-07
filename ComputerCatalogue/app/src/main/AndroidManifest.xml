@@ -10,19 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ComputerCatalogue">
         <activity
-            android:name=".MainActivity5"
+            android:name=".DesktopDetail"
             android:exported="true" />
         <activity
-            android:name=".MainActivity4"
+            android:name=".LaptopDetail"
             android:exported="true" />
         <activity
-            android:name=".MainActivity3"
+            android:name=".DesktopCatalogue"
             android:exported="true" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".LaptopCatalogue"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ComputerCatalogue"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
