@@ -46,8 +46,8 @@ public class DesktopDetail extends AppCompatActivity {
 
         String codigoSobremesa = intent.getStringExtra(ComputerCatalogue.COMPUTERCATALOGUE_SOBREMESAS_20000);
         String categoriaSombremesa = intent.getStringExtra(ComputerCatalogue.COMPUTERCATALOGUE_CATEGORIA_SOBREMESAS);
-        String codigoDell = intent.getStringExtra(DesktopCatalogue.DESKTOPCATALOGUE_SOBREMESA_DELL_20000_1);
-        String codigoHp = intent.getStringExtra(DesktopCatalogue.DESKTOPCATALOGUE_SOBREMESA_HP_20000_2);
+        String codigoDell = intent.getStringExtra(DesktopCategory.DESKTOPCATEGORY_SOBREMESA_DELL_20000_1);
+        String codigoHp = intent.getStringExtra(DesktopCategory.DESKTOPCATEGORY_SOBREMESA_HP_20000_2);
 
         if(codigoDell.equals("20000_1")) {
             iv_detalle_sobremesa.setImageResource(R.drawable.sobremesa_dell);
@@ -87,7 +87,7 @@ public class DesktopDetail extends AppCompatActivity {
     }
 
     public void volverASobremesas(View v) {
-        Intent pantallaSobremesas = new Intent(this, DesktopCatalogue.class);
+        Intent pantallaSobremesas = new Intent(this, DesktopCategory.class);
         startActivity(pantallaSobremesas);
     }
 }

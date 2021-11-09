@@ -16,10 +16,10 @@
             android:name=".LaptopDetail"
             android:exported="true" />
         <activity
-            android:name=".DesktopCatalogue"
+            android:name=".DesktopCategory"
             android:exported="true" />
         <activity
-            android:name=".LaptopCatalogue"
+            android:name=".LaptopCategory"
             android:exported="true" />
         <activity
             android:name=".ComputerCatalogue"

@@ -6,17 +6,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class DesktopCatalogue extends AppCompatActivity {
+public class DesktopCategory extends AppCompatActivity {
 
     protected static final String COMPUTERCATALOGUE_SOBREMESAS_20000 = "com.example.computercatalogue.sobremesas_20000";
     protected static final String COMPUTERCATALOGUE_CATEGORIA_SOBREMESAS = "com.example.computercatalogue.categoria_sobremesas";
-    protected static final String DESKTOPCATALOGUE_SOBREMESA_DELL_20000_1 = "com.example.computercatalogue.codigo_sobremesa";
-    protected static final String DESKTOPCATALOGUE_SOBREMESA_HP_20000_2 = "com.example.computercatalogue.codigo_sobremesa";
+    protected static final String DESKTOPCATEGORY_SOBREMESA_DELL_20000_1 = "com.example.computercatalogue.codigo_sobremesa";
+    protected static final String DESKTOPCATEGORY_SOBREMESA_HP_20000_2 = "com.example.computercatalogue.codigo_sobremesa";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.desktop_catalogue);
+        setContentView(R.layout.desktop_category);
     }
 
     public void volver(View v) {
@@ -32,7 +32,7 @@ public class DesktopCatalogue extends AppCompatActivity {
 
         Intent pantallaDetalleDell = new Intent(this, DesktopDetail.class);
         pantallaDetalleDell.putExtra(COMPUTERCATALOGUE_CATEGORIA_SOBREMESAS, categoria);
-        pantallaDetalleDell.putExtra(DESKTOPCATALOGUE_SOBREMESA_DELL_20000_1, sobremesaDell);
+        pantallaDetalleDell.putExtra(DESKTOPCATEGORY_SOBREMESA_DELL_20000_1, sobremesaDell);
         pantallaDetalleDell.putExtra(COMPUTERCATALOGUE_SOBREMESAS_20000, sobremesas);
         startActivity(pantallaDetalleDell);
     }
@@ -45,7 +45,7 @@ public class DesktopCatalogue extends AppCompatActivity {
 
         Intent pantallaDetalleHp = new Intent(this, DesktopDetail.class);
         pantallaDetalleHp.putExtra(COMPUTERCATALOGUE_CATEGORIA_SOBREMESAS, categoria);
-        pantallaDetalleHp.putExtra(DESKTOPCATALOGUE_SOBREMESA_HP_20000_2, sobremesaHp);
+        pantallaDetalleHp.putExtra(DESKTOPCATEGORY_SOBREMESA_HP_20000_2, sobremesaHp);
         pantallaDetalleHp.putExtra(COMPUTERCATALOGUE_SOBREMESAS_20000, sobremesas);
         startActivity(pantallaDetalleHp);
     }

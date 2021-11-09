@@ -45,8 +45,8 @@ public class LaptopDetail extends AppCompatActivity {
 
         String codigoPortatil = intent.getStringExtra(ComputerCatalogue.COMPUTERCATALOGUE_PORTATILES_10000);
         String categoriaPortatil = intent.getStringExtra(ComputerCatalogue.COMPUTERCATALOGUE_CATEGORIA_PORTATILES);
-        String codigoAsus = intent.getStringExtra(LaptopCatalogue.LAPTOPCATALOGUE_PORTATIL_ASUS_10000_1);
-        String codigoThomson = intent.getStringExtra(LaptopCatalogue.LAPTOPCATALOGUE_PORTATIL_THOMSON_10000_2);
+        String codigoAsus = intent.getStringExtra(LaptopCategory.LAPTOPCATEGORY_PORTATIL_ASUS_10000_1);
+        String codigoThomson = intent.getStringExtra(LaptopCategory.LAPTOPCATEGORY_PORTATIL_THOMSON_10000_2);
 
         if(codigoAsus.equals("10000_1")) {
             iv_detalle_portatil.setImageResource(R.drawable.portatil_asus);
@@ -86,7 +86,7 @@ public class LaptopDetail extends AppCompatActivity {
     }
 
     public void volverAPortatiles(View v) {
-        Intent pantallaPortatiles = new Intent(this, LaptopCatalogue.class);
+        Intent pantallaPortatiles = new Intent(this, LaptopCategory.class);
         startActivity(pantallaPortatiles);
     }
 }

@@ -68,7 +68,7 @@ public class ComputerCatalogue extends AppCompatActivity {
         String codigoPortatil = "10000";
         String categoria = "Portátiles";
 
-        Intent pantallaPortatiles = new Intent(this, LaptopCatalogue.class);
+        Intent pantallaPortatiles = new Intent(this, LaptopCategory.class);
         pantallaPortatiles.putExtra(COMPUTERCATALOGUE_PORTATILES_10000, codigoPortatil);
         pantallaPortatiles.putExtra(COMPUTERCATALOGUE_CATEGORIA_PORTATILES, categoria);
         startActivity(pantallaPortatiles);
@@ -79,7 +79,7 @@ public class ComputerCatalogue extends AppCompatActivity {
         String codigoSobremesa = "20000";
         String categoria = "Sobremesas";
 
-        Intent pantallaSobremesas = new Intent(this, DesktopCatalogue.class);
+        Intent pantallaSobremesas = new Intent(this, DesktopCategory.class);
         pantallaSobremesas.putExtra(COMPUTERCATALOGUE_SOBREMESAS_20000, codigoSobremesa);
         pantallaSobremesas.putExtra(COMPUTERCATALOGUE_CATEGORIA_SOBREMESAS, categoria);
         startActivity(pantallaSobremesas);
