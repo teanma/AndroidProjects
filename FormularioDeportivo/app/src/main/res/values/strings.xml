@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">FormularioDeportivo</string>
+    <string name="tv_name">Nombre:</string>
+    <string name="et_name"></string>
+    <string name="tv_surname">Apellido:</string>
+    <string name="et_surname"></string>
+    <string name="spinContact">Forma de contacto</string>
+    <string name="tv_obligatory_field">(*)</string>
+    <string name="spinSport">Deporte</string>
+    <string name="tv_sport"></string>
+    <string name="tv_position">Elige posición</string>
+    <string name="cb_position1_football">Portero</string>
+    <string name="cb_position2_football">Defensa</string>
+    <string name="cb_position3_football">Medio</string>
+    <string name="cb_position4_football">Delantero</string>
+    <string name="cb_position1_basketball">Base</string>
+    <string name="cb_position2_basketball">Escolta</string>
+    <string name="cb_position3_basketball">Alero</string>
+    <string name="cb_position4_basketball">Pivot</string>
+    <string name="btn_send">Enviar</string>
+    <string name="tv_phone">Móvil:</string>
+    <string name="tv_email">Email:</string>
+    <string name="et_phone"></string>
+    <string name="et_email"></string>
+</resources>
