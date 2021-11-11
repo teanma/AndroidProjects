@@ -7,7 +7,8 @@
     <string name="spinContact">Forma de contacto</string>
     <string name="tv_obligatory_field">(*)</string>
     <string name="spinSport">Deporte</string>
-    <string name="tv_sport"></string>
+    <string name="tv_football">Fútbol</string>
+    <string name="tv_basketball">Baloncesto</string>
     <string name="tv_position">Elige posición</string>
     <string name="cb_position1_football">Portero</string>
     <string name="cb_position2_football">Defensa</string>
