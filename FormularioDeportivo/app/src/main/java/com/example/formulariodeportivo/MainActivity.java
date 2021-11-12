@@ -2,6 +2,7 @@ package com.example.formulariodeportivo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,6 +15,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements Listener {
+
+    protected static final String MAINACTIVITY_NAME = "com.example.formulariodeportivo.name";
+    protected static final String MAINACTIVITY_SURNAME = "com.example.formulariodeportivo.surname";
+    protected static final String MAINACTIVITY_PHONE = "com.example.formulariodeportivo.phone";
+    protected static final String MAINACTIVITY_EMAIL = "com.example.formulariodeportivo.email";
+    protected static final String MAINACTIVITY_PORTERO = "com.example.formulariodeportivo.portero";
+    protected static final String MAINACTIVITY_DEFENSA = "com.example.formulariodeportivo.defensa";
+    protected static final String MAINACTIVITY_MEDIO = "com.example.formulariodeportivo.medio";
+    protected static final String MAINACTIVITY_DELANTERO = "com.example.formulariodeportivo.delantero";
+    protected static final String MAINACTIVITY_BASE = "com.example.formulariodeportivo.base";
+    protected static final String MAINACTIVITY_ESCOLTA = "com.example.formulariodeportivo.escolta";
+    protected static final String MAINACTIVITY_ALERO = "com.example.formulariodeportivo.alero";
+    protected static final String MAINACTIVITY_PIVOT = "com.example.formulariodeportivo.pivot";
 
     TextView tv_name, tv_surname, tv_phone, tv_email, tv_football, tv_basketball, tv_position, tv_obligatory_field_name, tv_obligatory_field_surname, tv_obligatory_field_spinContact, tv_obligatory_field_phone, tv_obligatory_field_email, tv_obligatory_field_spinSport;
     EditText et_name, et_surname, et_phone, et_email;
@@ -193,5 +207,49 @@ public class MainActivity extends AppCompatActivity implements Listener {
 
             }
         });
+    }
+
+    public void sendData(View v) {
+
+        String name = et_name.getText().toString();
+        String surname = et_surname.getText().toString();
+        String phone = et_phone.getText().toString();
+        String email = et_email.getText().toString();
+        String portero = "portero";
+        String defensa = "defensa";
+        String medio = "medio";
+        String delantero = "delantero";
+        String base = "base";
+        String escolta = "escolta";
+        String alero = "alero";
+        String pivot = "pivot";
+
+        if (name.isEmpty() || surname.isEmpty() || phone.isEmpty() || email.isEmpty()) {
+            Toast.makeText(this, "Rellene los campos", Toast.LENGTH_SHORT).show();
+        } else {
+            Intent pantallaSecundaria = new Intent(this, MainActivity2.class);
+            if (cb_position1_football.isChecked()) {
+                pantallaSecundaria.putExtra(MAINACTIVITY_PORTERO, portero);
+            } else if (cb_position2_football.isChecked()) {
+                pantallaSecundaria.putExtra(MAINACTIVITY_DEFENSA, defensa);
+            } else if (cb_position3_football.isChecked()) {
+                pantallaSecundaria.putExtra(MAINACTIVITY_MEDIO, medio);
+            } else if (cb_position4_football.isChecked()) {
+                pantallaSecundaria.putExtra(MAINACTIVITY_DELANTERO, delantero);
+            } else if (cb_position1_basketball.isChecked()) {
+                pantallaSecundaria.putExtra(MAINACTIVITY_BASE, base);
+            } else if (cb_position2_basketball.isChecked()) {
+                pantallaSecundaria.putExtra(MAINACTIVITY_ESCOLTA, escolta);
+            } else if (cb_position3_basketball.isChecked()) {
+                pantallaSecundaria.putExtra(MAINACTIVITY_ALERO, alero);
+            } else if (cb_position4_basketball.isChecked()) {
+                pantallaSecundaria.putExtra(MAINACTIVITY_PIVOT, pivot);
+            }
+            pantallaSecundaria.putExtra(MAINACTIVITY_NAME, name);
+            pantallaSecundaria.putExtra(MAINACTIVITY_NAME, surname);
+            pantallaSecundaria.putExtra(MAINACTIVITY_NAME, phone);
+            pantallaSecundaria.putExtra(MAINACTIVITY_NAME, email);
+        }
+
     }
 }
