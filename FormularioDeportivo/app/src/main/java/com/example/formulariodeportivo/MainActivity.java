@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity implements Listener {
     protected static final String MAINACTIVITY_SURNAME = "com.example.formulariodeportivo.surname";
     protected static final String MAINACTIVITY_PHONE = "com.example.formulariodeportivo.phone";
     protected static final String MAINACTIVITY_EMAIL = "com.example.formulariodeportivo.email";
+    protected static final String MAINACTIVITY_FOOTBALL = "com.example.formulariodeportivo.football";
+    protected static final String MAINACTIVITY_BASKETBALL = "com.example.formulariodeportivo.basketball";
     protected static final String MAINACTIVITY_PORTERO = "com.example.formulariodeportivo.portero";
     protected static final String MAINACTIVITY_DEFENSA = "com.example.formulariodeportivo.defensa";
     protected static final String MAINACTIVITY_MEDIO = "com.example.formulariodeportivo.medio";
@@ -215,6 +217,8 @@ public class MainActivity extends AppCompatActivity implements Listener {
         String surname = et_surname.getText().toString();
         String phone = et_phone.getText().toString();
         String email = et_email.getText().toString();
+        String football = tv_football.getText().toString();
+        String basketball = tv_basketball.getText().toString();
         String portero = "portero";
         String defensa = "defensa";
         String medio = "medio";
@@ -224,31 +228,45 @@ public class MainActivity extends AppCompatActivity implements Listener {
         String alero = "alero";
         String pivot = "pivot";
 
-        if (name.isEmpty() || surname.isEmpty() || phone.isEmpty() || email.isEmpty()) {
+        if (name.isEmpty() || surname.isEmpty() || phone.isEmpty() && email.isEmpty() || !cb_position1_football.isChecked() && !cb_position2_football.isChecked() && !cb_position3_football.isChecked() && !cb_position4_football.isChecked() && !cb_position1_basketball.isChecked() && !cb_position2_basketball.isChecked() && !cb_position3_basketball.isChecked() && !cb_position4_basketball.isChecked()) {
             Toast.makeText(this, "Rellene los campos", Toast.LENGTH_SHORT).show();
         } else {
             Intent pantallaSecundaria = new Intent(this, MainActivity2.class);
+            if (!et_phone.getText().toString().isEmpty()) {
+                pantallaSecundaria.putExtra(MAINACTIVITY_PHONE, phone);
+            }
+            if (!et_email.getText().toString().isEmpty()) {
+                pantallaSecundaria.putExtra(MAINACTIVITY_EMAIL, email);
+            }
             if (cb_position1_football.isChecked()) {
                 pantallaSecundaria.putExtra(MAINACTIVITY_PORTERO, portero);
-            } else if (cb_position2_football.isChecked()) {
+            }
+            if (cb_position2_football.isChecked()) {
                 pantallaSecundaria.putExtra(MAINACTIVITY_DEFENSA, defensa);
-            } else if (cb_position3_football.isChecked()) {
+            }
+            if (cb_position3_football.isChecked()) {
                 pantallaSecundaria.putExtra(MAINACTIVITY_MEDIO, medio);
-            } else if (cb_position4_football.isChecked()) {
+            }
+            if (cb_position4_football.isChecked()) {
                 pantallaSecundaria.putExtra(MAINACTIVITY_DELANTERO, delantero);
-            } else if (cb_position1_basketball.isChecked()) {
+            }
+            if (cb_position1_basketball.isChecked()) {
                 pantallaSecundaria.putExtra(MAINACTIVITY_BASE, base);
-            } else if (cb_position2_basketball.isChecked()) {
+            }
+            if (cb_position2_basketball.isChecked()) {
                 pantallaSecundaria.putExtra(MAINACTIVITY_ESCOLTA, escolta);
-            } else if (cb_position3_basketball.isChecked()) {
+            }
+            if (cb_position3_basketball.isChecked()) {
                 pantallaSecundaria.putExtra(MAINACTIVITY_ALERO, alero);
-            } else if (cb_position4_basketball.isChecked()) {
+            }
+            if (cb_position4_basketball.isChecked()) {
                 pantallaSecundaria.putExtra(MAINACTIVITY_PIVOT, pivot);
             }
             pantallaSecundaria.putExtra(MAINACTIVITY_NAME, name);
-            pantallaSecundaria.putExtra(MAINACTIVITY_NAME, surname);
-            pantallaSecundaria.putExtra(MAINACTIVITY_NAME, phone);
-            pantallaSecundaria.putExtra(MAINACTIVITY_NAME, email);
+            pantallaSecundaria.putExtra(MAINACTIVITY_SURNAME, surname);
+            pantallaSecundaria.putExtra(MAINACTIVITY_FOOTBALL, football);
+            pantallaSecundaria.putExtra(MAINACTIVITY_BASKETBALL, basketball);
+            startActivity(pantallaSecundaria);
         }
 
     }
