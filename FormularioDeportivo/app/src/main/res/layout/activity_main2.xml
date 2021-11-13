@@ -7,69 +7,6 @@
     tools:context=".MainActivity2">
 
     <TextView
-        android:id="@+id/tv_alero"
-        android:layout_width="107dp"
-        android:layout_height="19dp"
-        android:layout_marginEnd="77dp"
-        android:text="@string/tv_position_result"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_escolta" />
-
-    <TextView
-        android:id="@+id/tv_pivot"
-        android:layout_width="107dp"
-        android:layout_height="19dp"
-        android:layout_marginEnd="77dp"
-        android:text="@string/tv_position_result"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_alero" />
-
-    <TextView
-        android:id="@+id/tv_defensa"
-        android:layout_width="107dp"
-        android:layout_height="19dp"
-        android:layout_marginEnd="77dp"
-        android:text="@string/tv_position_result"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_portero" />
-
-    <TextView
-        android:id="@+id/tv_medio"
-        android:layout_width="107dp"
-        android:layout_height="19dp"
-        android:layout_marginEnd="77dp"
-        android:text="@string/tv_position_result"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_defensa" />
-
-    <TextView
-        android:id="@+id/tv_delantero"
-        android:layout_width="107dp"
-        android:layout_height="19dp"
-        android:layout_marginEnd="77dp"
-        android:text="@string/tv_position_result"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_medio" />
-
-    <TextView
-        android:id="@+id/tv_base"
-        android:layout_width="107dp"
-        android:layout_height="19dp"
-        android:layout_marginEnd="77dp"
-        android:text="@string/tv_position_result"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_delantero" />
-
-    <TextView
-        android:id="@+id/tv_escolta"
-        android:layout_width="107dp"
-        android:layout_height="19dp"
-        android:layout_marginEnd="77dp"
-        android:text="@string/tv_position_result"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_base" />
-
-    <TextView
         android:id="@+id/tv_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -90,46 +27,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_res_surname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/tv_surname"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_res_name" />
-
-    <TextView
-        android:id="@+id/tv_res_phone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/tv_phone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_res_surname" />
-
-    <TextView
-        android:id="@+id/tv_res_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/tv_email"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_res_phone" />
-
-    <TextView
-        android:id="@+id/tv_res_football"
-        android:layout_width="76dp"
-        android:layout_height="17dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="48dp"
-        android:text="@string/tv_res_football"
-        app:layout_constraintStart_toEndOf="@+id/tv_res_position"
-        app:layout_constraintTop_toBottomOf="@+id/tv_email_result" />
-
-    <TextView
         android:id="@+id/tv_name_result"
         android:layout_width="219dp"
         android:layout_height="21dp"
@@ -138,6 +35,16 @@
         android:text="@string/tv_data_result"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_data" />
+
+    <TextView
+        android:id="@+id/tv_res_surname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/tv_surname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_res_name" />
 
     <TextView
         android:id="@+id/tv_surname_result"
@@ -150,7 +57,18 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_name_result" />
 
     <TextView
-        android:id="@+id/tv_phone_result"
+        android:id="@+id/tv_res_contact"
+        android:layout_width="55dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/tv_contact"
+        android:textAlignment="textEnd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_res_surname" />
+
+    <TextView
+        android:id="@+id/tv_contact_result"
         android:layout_width="219dp"
         android:layout_height="20dp"
         android:layout_marginTop="21dp"
@@ -160,54 +78,35 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_surname_result" />
 
     <TextView
-        android:id="@+id/tv_email_result"
-        android:layout_width="218dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="37dp"
-        android:text="@string/tv_data_result"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_phone_result" />
+        android:id="@+id/tv_sport_result"
+        android:layout_width="78dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/tv_sport"
+        android:textAlignment="textEnd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_res_contact" />
 
     <TextView
-        android:id="@+id/tv_portero"
-        android:layout_width="107dp"
-        android:layout_height="19dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="77dp"
+        android:id="@+id/tv_position_result"
+        android:layout_width="256dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="36dp"
         android:text="@string/tv_position_result"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_email_result" />
-
-    <TextView
-        android:id="@+id/tv_res_position"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="48dp"
-        android:text="@string/tv_res_position"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_res_email" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_contact_result" />
 
     <Button
         android:id="@+id/btn_return"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="16dp"
         android:onClick="returnToMainActivity"
         android:text="@string/btn_return"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_pivot" />
-
-    <TextView
-        android:id="@+id/tv_res_basketball"
-        android:layout_width="76dp"
-        android:layout_height="17dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="62dp"
-        android:text="@string/tv_res_basketball"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_res_football" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_position_result" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,9 +27,8 @@
     //MainActivity2
     <string name="tv_data">Datos enviados</string>
     <string name="tv_data_result"></string>
-    <string name="tv_res_position">Posiciones:</string>
-    <string name="tv_res_football"></string>
-    <string name="tv_res_basketball"></string>
+    <string name="tv_contact"></string>
+    <string name="tv_sport"></string>
     <string name="tv_position_result"></string>
     <string name="btn_return">VOLVER</string>
 </resources>
