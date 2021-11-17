@@ -112,57 +112,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_basketball" />
 
-    <CheckBox
-        android:id="@+id/cb_position1_football"
-        android:layout_width="83dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/cb_position1_football"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_position"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <CheckBox
-        android:id="@+id/cb_position2_football"
-        android:layout_width="88dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/cb_position2_football"
-        app:layout_constraintStart_toEndOf="@+id/cb_position1_football"
-        app:layout_constraintTop_toBottomOf="@+id/tv_position"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <CheckBox
-        android:id="@+id/cb_position3_football"
-        android:layout_width="73dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/cb_position3_football"
-        app:layout_constraintStart_toEndOf="@+id/cb_position2_football"
-        app:layout_constraintTop_toBottomOf="@+id/tv_position"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <CheckBox
-        android:id="@+id/cb_position4_football"
-        android:layout_width="96dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/cb_position4_football"
-        app:layout_constraintStart_toEndOf="@+id/cb_position3_football"
-        app:layout_constraintTop_toBottomOf="@+id/tv_position"
-        tools:ignore="TouchTargetSizeCheck" />
-
     <Button
         android:id="@+id/btn_send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="13dp"
         android:onClick="sendData"
         android:text="@string/btn_send"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cb_position1_basketball" />
+        app:layout_constraintTop_toBottomOf="@+id/rg_basketball" />
 
     <TextView
         android:id="@+id/tv_phone"
@@ -250,43 +209,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_email" />
 
-    <CheckBox
-        android:id="@+id/cb_position1_basketball"
-        android:layout_width="69dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="3dp"
-        android:text="@string/cb_position1_basketball"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cb_position1_football" />
-
-    <CheckBox
-        android:id="@+id/cb_position2_basketball"
-        android:layout_width="82dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="3dp"
-        android:text="@string/cb_position2_basketball"
-        app:layout_constraintStart_toEndOf="@+id/cb_position1_basketball"
-        app:layout_constraintTop_toBottomOf="@+id/cb_position1_football" />
-
-    <CheckBox
-        android:id="@+id/cb_position3_basketball"
-        android:layout_width="75dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="3dp"
-        android:text="@string/cb_position3_basketball"
-        app:layout_constraintStart_toEndOf="@+id/cb_position2_basketball"
-        app:layout_constraintTop_toBottomOf="@+id/cb_position2_football" />
-
-    <CheckBox
-        android:id="@+id/cb_position4_basketball"
-        android:layout_width="69dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="3dp"
-        android:text="@string/cb_position4_basketball"
-        app:layout_constraintStart_toEndOf="@+id/cb_position3_basketball"
-        app:layout_constraintTop_toBottomOf="@+id/cb_position3_football" />
-
     <TextView
         android:id="@+id/tv_basketball"
         android:layout_width="83dp"
@@ -296,5 +218,73 @@
         android:text="@string/tv_basketball"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_football" />
+
+    <RadioGroup
+        android:id="@+id/rg_football"
+        android:layout_width="337dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="21dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_position">
+
+        <RadioButton
+            android:id="@+id/rb_portero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rb_portero" />
+
+        <RadioButton
+            android:id="@+id/rb_medio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rb_medio" />
+
+        <RadioButton
+            android:id="@+id/rb_defensa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rb_defensa" />
+
+        <RadioButton
+            android:id="@+id/rb_delantero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rb_delantero" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rg_basketball"
+        android:layout_width="278dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_football">
+
+        <RadioButton
+            android:id="@+id/rb_base"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rb_base" />
+
+        <RadioButton
+            android:id="@+id/rb_escolta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rb_escolta" />
+
+        <RadioButton
+            android:id="@+id/rb_alero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rb_alero" />
+
+        <RadioButton
+            android:id="@+id/rb_pivot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rb_pivot" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

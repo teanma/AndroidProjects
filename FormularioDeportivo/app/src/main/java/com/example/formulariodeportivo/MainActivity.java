@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,7 +32,8 @@ public class MainActivity extends AppCompatActivity implements Listener {
     TextView tv_name, tv_surname, tv_phone, tv_email, tv_football, tv_basketball, tv_position, tv_obligatory_field_name, tv_obligatory_field_surname, tv_obligatory_field_spinContact, tv_obligatory_field_phone, tv_obligatory_field_email, tv_obligatory_field_spinSport;
     EditText et_name, et_surname, et_phone, et_email;
     Spinner spinContact, spinSport;
-    CheckBox cb_position1_football, cb_position2_football, cb_position3_football, cb_position4_football, cb_position1_basketball, cb_position2_basketball, cb_position3_basketball, cb_position4_basketball;
+    RadioGroup rg_football, rg_basketball;
+    RadioButton rb_portero, rb_medio, rb_defensa, rb_delantero, rb_base, rb_escolta, rb_alero, rb_pivot;
     Button btn_send;
 
     @Override
@@ -51,14 +54,17 @@ public class MainActivity extends AppCompatActivity implements Listener {
         et_phone.setVisibility(View.GONE);
         et_email.setVisibility(View.GONE);
 
-        cb_position1_football.setVisibility(View.GONE);
-        cb_position2_football.setVisibility(View.GONE);
-        cb_position3_football.setVisibility(View.GONE);
-        cb_position4_football.setVisibility(View.GONE);
-        cb_position1_basketball.setVisibility(View.GONE);
-        cb_position2_basketball.setVisibility(View.GONE);
-        cb_position3_basketball.setVisibility(View.GONE);
-        cb_position4_basketball.setVisibility(View.GONE);
+        rg_football.setVisibility(View.GONE);
+        rg_basketball.setVisibility(View.GONE);
+
+        //rb_portero.setVisibility(View.GONE);
+        //rb_medio.setVisibility(View.GONE);
+        //rb_defensa.setVisibility(View.GONE);
+        //rb_delantero.setVisibility(View.GONE);
+        //rb_base.setVisibility(View.GONE);
+        //rb_escolta.setVisibility(View.GONE);
+        //rb_alero.setVisibility(View.GONE);
+        //rb_pivot.setVisibility(View.GONE);
 
         contactsListener();
 
@@ -88,14 +94,17 @@ public class MainActivity extends AppCompatActivity implements Listener {
         spinContact = (Spinner) findViewById(R.id.spinContact);
         spinSport = (Spinner) findViewById(R.id.spinSport);
 
-        cb_position1_football = (CheckBox) findViewById(R.id.cb_position1_football);
-        cb_position2_football = (CheckBox) findViewById(R.id.cb_position2_football);
-        cb_position3_football = (CheckBox) findViewById(R.id.cb_position3_football);
-        cb_position4_football = (CheckBox) findViewById(R.id.cb_position4_football);
-        cb_position1_basketball = (CheckBox) findViewById(R.id.cb_position1_basketball);
-        cb_position2_basketball = (CheckBox) findViewById(R.id.cb_position2_basketball);
-        cb_position3_basketball = (CheckBox) findViewById(R.id.cb_position3_basketball);
-        cb_position4_basketball = (CheckBox) findViewById(R.id.cb_position4_basketball);
+        rg_football = (RadioGroup) findViewById(R.id.rg_football);
+        rg_basketball = (RadioGroup) findViewById(R.id.rg_basketball);
+
+        rb_portero = (RadioButton) findViewById(R.id.rb_portero);
+        rb_medio = (RadioButton) findViewById(R.id.rb_medio);
+        rb_defensa = (RadioButton) findViewById(R.id.rb_defensa);
+        rb_delantero = (RadioButton) findViewById(R.id.rb_delantero);
+        rb_base = (RadioButton) findViewById(R.id.rb_base);
+        rb_escolta = (RadioButton) findViewById(R.id.rb_escolta);
+        rb_alero = (RadioButton) findViewById(R.id.rb_alero);
+        rb_pivot = (RadioButton) findViewById(R.id.rb_pivot);
 
         btn_send = (Button) findViewById(R.id.btn_send);
     }
@@ -163,40 +172,24 @@ public class MainActivity extends AppCompatActivity implements Listener {
                 Toast.makeText(parent.getContext(), res, Toast.LENGTH_SHORT).show();
                 if (selected.equals("Football")) {
                     tv_basketball.setVisibility(View.GONE);
-                    cb_position1_basketball.setVisibility(View.GONE);
-                    cb_position2_basketball.setVisibility(View.GONE);
-                    cb_position3_basketball.setVisibility(View.GONE);
-                    cb_position4_basketball.setVisibility(View.GONE);
+                    rg_basketball.setVisibility(View.GONE);
                     tv_position.setVisibility(View.VISIBLE);
                     tv_football.setVisibility(View.VISIBLE);
-                    cb_position1_football.setVisibility(View.VISIBLE);
-                    cb_position2_football.setVisibility(View.VISIBLE);
-                    cb_position3_football.setVisibility(View.VISIBLE);
-                    cb_position4_football.setVisibility(View.VISIBLE);
+                    rg_football.setVisibility(View.VISIBLE);
                 } else if (selected.equals("Basketball")) {
                     tv_basketball.setVisibility(View.VISIBLE);
-                    cb_position1_basketball.setVisibility(View.VISIBLE);
-                    cb_position2_basketball.setVisibility(View.VISIBLE);
-                    cb_position3_basketball.setVisibility(View.VISIBLE);
-                    cb_position4_basketball.setVisibility(View.VISIBLE);
+                    rg_basketball.setVisibility(View.VISIBLE);
                     tv_position.setVisibility(View.VISIBLE);
                     tv_football.setVisibility(View.GONE);
-                    cb_position1_football.setVisibility(View.GONE);
-                    cb_position2_football.setVisibility(View.GONE);
-                    cb_position3_football.setVisibility(View.GONE);
-                    cb_position4_football.setVisibility(View.GONE);
+                    rg_football.setVisibility(View.GONE);
                 } else {
                     tv_basketball.setVisibility(View.GONE);
-                    cb_position1_basketball.setVisibility(View.GONE);
-                    cb_position2_basketball.setVisibility(View.GONE);
-                    cb_position3_basketball.setVisibility(View.GONE);
-                    cb_position4_basketball.setVisibility(View.GONE);
+                    rg_basketball.setVisibility(View.GONE);
                     tv_position.setVisibility(View.GONE);
                     tv_football.setVisibility(View.GONE);
-                    cb_position1_football.setVisibility(View.GONE);
-                    cb_position2_football.setVisibility(View.GONE);
-                    cb_position3_football.setVisibility(View.GONE);
-                    cb_position4_football.setVisibility(View.GONE);
+                    rg_football.setVisibility(View.GONE);
+                    rg_football.clearCheck();
+                    rg_basketball.clearCheck();
                 }
             }
 
@@ -217,9 +210,16 @@ public class MainActivity extends AppCompatActivity implements Listener {
         String email_contact = "Email:";
         String football = "Fútbol:";
         String basketball = "Baloncesto:";
-        List<String> positions = new ArrayList<>();
+        String portero = "Portero";
+        String medio = "Medio";
+        String defensa = "Defensa";
+        String delantero = "Delantero";
+        String base = "Base";
+        String escolta = "Escolta";
+        String alero = "Alero";
+        String pivot = "Pivot";
 
-        if (name.isEmpty() || surname.isEmpty() || phone.isEmpty() && email.isEmpty() || !cb_position1_football.isChecked() && !cb_position2_football.isChecked() && !cb_position3_football.isChecked() && !cb_position4_football.isChecked() && !cb_position1_basketball.isChecked() && !cb_position2_basketball.isChecked() && !cb_position3_basketball.isChecked() && !cb_position4_basketball.isChecked()) {
+        if (name.isEmpty() || surname.isEmpty() || phone.isEmpty() && email.isEmpty() || !rb_portero.isChecked() && !rb_medio.isChecked() && !rb_defensa.isChecked() && !rb_delantero.isChecked() && !rb_base.isChecked() && !rb_escolta.isChecked() && !rb_alero.isChecked() && !rb_pivot.isChecked()) {
             Toast.makeText(this, "Rellene los campos", Toast.LENGTH_SHORT).show();
         } else {
             Intent pantallaSecundaria = new Intent(this, MainActivity2.class);
@@ -231,45 +231,37 @@ public class MainActivity extends AppCompatActivity implements Listener {
                 pantallaSecundaria.putExtra(MAINACTIVITY_SELECTED_CONTACT, email_contact);
                 pantallaSecundaria.putExtra(MAINACTIVITY_CONTACT, email);
             }
-            if (cb_position1_football.isChecked()) {
-                positions.add(cb_position1_football.getText().toString());
+            if (rb_portero.isChecked()) {
                 pantallaSecundaria.putExtra(MAINACTIVITY_SPORT, football);
-                pantallaSecundaria.putExtra(MAINACTIVITY_POSITION, String.valueOf(positions));
+                pantallaSecundaria.putExtra(MAINACTIVITY_POSITION, portero);
             }
-            if (cb_position2_football.isChecked()) {
-                positions.add(cb_position2_football.getText().toString());
+            if (rb_medio.isChecked()) {
                 pantallaSecundaria.putExtra(MAINACTIVITY_SPORT, football);
-                pantallaSecundaria.putExtra(MAINACTIVITY_POSITION, String.valueOf(positions));
+                pantallaSecundaria.putExtra(MAINACTIVITY_POSITION, medio);
             }
-            if (cb_position3_football.isChecked()) {
-                positions.add(cb_position3_football.getText().toString());
+            if (rb_defensa.isChecked()) {
                 pantallaSecundaria.putExtra(MAINACTIVITY_SPORT, football);
-                pantallaSecundaria.putExtra(MAINACTIVITY_POSITION, String.valueOf(positions));
+                pantallaSecundaria.putExtra(MAINACTIVITY_POSITION, defensa);
             }
-            if (cb_position4_football.isChecked()) {
-                positions.add(cb_position4_football.getText().toString());
+            if (rb_delantero.isChecked()) {
                 pantallaSecundaria.putExtra(MAINACTIVITY_SPORT, football);
-                pantallaSecundaria.putExtra(MAINACTIVITY_POSITION, String.valueOf(positions));
+                pantallaSecundaria.putExtra(MAINACTIVITY_POSITION, delantero);
             }
-            if (cb_position1_basketball.isChecked()) {
-                positions.add(cb_position1_basketball.getText().toString());
+            if (rb_base.isChecked()) {
                 pantallaSecundaria.putExtra(MAINACTIVITY_SPORT, basketball);
-                pantallaSecundaria.putExtra(MAINACTIVITY_POSITION, String.valueOf(positions));
+                pantallaSecundaria.putExtra(MAINACTIVITY_POSITION, base);
             }
-            if (cb_position2_basketball.isChecked()) {
-                positions.add(cb_position2_basketball.getText().toString());
+            if (rb_escolta.isChecked()) {
                 pantallaSecundaria.putExtra(MAINACTIVITY_SPORT, basketball);
-                pantallaSecundaria.putExtra(MAINACTIVITY_POSITION, String.valueOf(positions));
+                pantallaSecundaria.putExtra(MAINACTIVITY_POSITION, escolta);
             }
-            if (cb_position3_basketball.isChecked()) {
-                positions.add(cb_position3_basketball.getText().toString());
+            if (rb_alero.isChecked()) {
                 pantallaSecundaria.putExtra(MAINACTIVITY_SPORT, basketball);
-                pantallaSecundaria.putExtra(MAINACTIVITY_POSITION, String.valueOf(positions));
+                pantallaSecundaria.putExtra(MAINACTIVITY_POSITION, alero);
             }
-            if (cb_position4_basketball.isChecked()) {
-                positions.add(cb_position4_basketball.getText().toString());
+            if (rb_pivot.isChecked()) {
                 pantallaSecundaria.putExtra(MAINACTIVITY_SPORT, basketball);
-                pantallaSecundaria.putExtra(MAINACTIVITY_POSITION, String.valueOf(positions));
+                pantallaSecundaria.putExtra(MAINACTIVITY_POSITION, pivot);
             }
             pantallaSecundaria.putExtra(MAINACTIVITY_NAME, name);
             pantallaSecundaria.putExtra(MAINACTIVITY_SURNAME, surname);
