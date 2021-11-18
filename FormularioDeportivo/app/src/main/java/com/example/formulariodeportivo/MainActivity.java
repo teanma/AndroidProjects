@@ -145,6 +145,8 @@ public class MainActivity extends AppCompatActivity implements Listener {
                     tv_phone.setVisibility(View.GONE);
                     et_phone.setVisibility(View.GONE);
                     tv_obligatory_field_phone.setVisibility(View.GONE);
+                    et_email.getText().clear();
+                    et_phone.getText().clear();
                 }
             }
 
