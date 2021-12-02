@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -10,10 +11,10 @@
         android:id="@+id/rg_windows_versions"
         android:layout_width="329dp"
         android:layout_height="53dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="16dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lv_fruits">
+        app:layout_constraintTop_toBottomOf="@+id/lv_operating_systems">
 
         <RadioButton
             android:id="@+id/rb_windows7"
@@ -36,14 +37,6 @@
 
     </RadioGroup>
 
-    <ListView
-        android:id="@+id/lv_fruits"
-        android:layout_width="411dp"
-        android:layout_height="143dp"
-        android:layout_marginTop="104dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/btn_load_info"
         android:layout_width="wrap_content"
@@ -56,7 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/rg_linux_versions" />
 
     <TextView
-        android:id="@+id/tv_selecct_fruit"
+        android:id="@+id/tv_select_os"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -94,5 +87,14 @@
             android:layout_weight="0"
             android:text="@string/rb_others" />
     </RadioGroup>
+
+    <ListView
+        android:id="@+id/lv_operating_systems"
+        android:layout_width="410dp"
+        android:layout_height="158dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_select_os" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
