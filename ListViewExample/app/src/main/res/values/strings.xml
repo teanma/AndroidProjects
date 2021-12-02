@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ListViewExample</string>
+    <string name="btn_load_info">LOAD</string>
+    <string name="tv_fruits">Select a fruit</string>
+    <string name="rb_windows7">Windows 7</string>
+    <string name="rb_windows10">Windows 10</string>
+    <string name="rb_windows11">Windows 11</string>
+    <string name="rb_ubuntu">Ubuntu</string>
+    <string name="rb_red_hat">RedHat</string>
+    <string name="rb_others">Others</string>
+    <string name="rb_ubuntu">Ubuntu</string>
+    <string name="rb_red_hat">RedHat</string>
+    <string name="rb_others">Others</string>
+</resources>
