@@ -46,15 +46,22 @@ public class MainActivity extends AppCompatActivity {
         lv_operating_systems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String selected = parent.getSelectedItem().toString();
-                Toast.makeText(parent.getContext(), "OS selected " + selected, Toast.LENGTH_SHORT).show();
-                if (selected.equals("Windows")) {
-                    rg_windows_versions.setVisibility(View.VISIBLE);
-                } else if (selected.equals("Linux")) {
-                    rg_linux_versions.setVisibility(View.VISIBLE);
-                } else {
-                    rg_linux_versions.setVisibility(View.GONE);
-                    rg_windows_versions.setVisibility(View.GONE);
+                String selectedItem = (String) parent.getItemAtPosition(position);
+                Toast.makeText(parent.getContext(), "OS selected: " + selectedItem, Toast.LENGTH_SHORT).show();
+                switch (selectedItem) {
+                    case "Windows":
+                        rg_windows_versions.setVisibility(View.VISIBLE);
+                        rg_linux_versions.setVisibility(View.GONE);
+                        break;
+                    case "Linux":
+                        rg_linux_versions.setVisibility(View.VISIBLE);
+                        rg_windows_versions.setVisibility(View.GONE);
+                        break;
+                    case "iOS":
+                    case "Others":
+                        rg_linux_versions.setVisibility(View.GONE);
+                        rg_windows_versions.setVisibility(View.GONE);
+                        break;
                 }
             }
         });
@@ -83,36 +90,33 @@ public class MainActivity extends AppCompatActivity {
         String ubuntu = "Ubuntu";
         String red_hat = "RedHat";
         String linux_others = "Another Linux version";
-        String iOS = "iOS";
+        String ios = "iOS";
         String others = "Others";
 
         Intent secondaryScreen = new Intent(this, MainActivity2.class);
         if (rb_windows7.isChecked()) {
             secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, windows);
             secondaryScreen.putExtra(MAINACTIVITY_VERSION, windows7);
-        }
-        if (rb_windows10.isChecked()) {
+        } else if (rb_windows10.isChecked()) {
             secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, windows);
             secondaryScreen.putExtra(MAINACTIVITY_VERSION, windows10);
-        }
-        if (rb_windows11.isChecked()) {
+        } else if (rb_windows11.isChecked()) {
             secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, windows);
             secondaryScreen.putExtra(MAINACTIVITY_VERSION, windows11);
-        }
-        if (rb_ubuntu.isChecked()) {
+        } else if (rb_ubuntu.isChecked()) {
             secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, linux);
             secondaryScreen.putExtra(MAINACTIVITY_VERSION, ubuntu);
-        }
-        if (rb_red_hat.isChecked()) {
+        } else if (rb_red_hat.isChecked()) {
             secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, linux);
             secondaryScreen.putExtra(MAINACTIVITY_VERSION, red_hat);
-        }
-        if (rb_linux_others.isChecked()) {
+        } else if (rb_linux_others.isChecked()) {
             secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, linux);
             secondaryScreen.putExtra(MAINACTIVITY_VERSION, linux_others);
+        } else {
+            secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, ios);
+            secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, others);
+            secondaryScreen.putExtra(MAINACTIVITY_VERSION, "No available version");
         }
-        secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, iOS);
-        secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, others);
         startActivity(secondaryScreen);
     }
 }

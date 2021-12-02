@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity2 extends AppCompatActivity {
@@ -22,6 +23,10 @@ public class MainActivity2 extends AppCompatActivity {
         tv_selected_os.setText(operating_system);
         TextView tv_selected_version = (TextView) findViewById(R.id.tv_selected_version);
         tv_selected_version.setText(version);
+    }
 
+    public void backToHome(View v) {
+        Intent mainScreen = new Intent(this, MainActivity.class);
+        startActivity(mainScreen);
     }
 }

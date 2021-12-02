@@ -11,4 +11,5 @@
     <string name="tv_data">Data loaded</string>
     <string name="tv_operating_system">Operating system:</string>
     <string name="tv_version">Version:</string>
+    <string name="btn_return">RETURN</string>
 </resources>
