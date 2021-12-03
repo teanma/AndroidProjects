@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup rg_windows_versions, rg_linux_versions;
     Button btn_load_info;
     String selectedItem;
+    boolean isSelected;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,15 +57,18 @@ public class MainActivity extends AppCompatActivity {
                     case "Windows":
                         rg_windows_versions.setVisibility(View.VISIBLE);
                         rg_linux_versions.setVisibility(View.GONE);
+                        isSelected= true;
                         break;
                     case "Linux":
                         rg_linux_versions.setVisibility(View.VISIBLE);
                         rg_windows_versions.setVisibility(View.GONE);
+                        isSelected= true;
                         break;
                     case "iOS":
                     case "Others":
                         rg_linux_versions.setVisibility(View.GONE);
                         rg_windows_versions.setVisibility(View.GONE);
+                        isSelected= true;
                         break;
                 }
             }
@@ -97,32 +101,38 @@ public class MainActivity extends AppCompatActivity {
         String ios = "iOS";
         String others = "Others";
 
-        Intent secondaryScreen = new Intent(this, MainActivity2.class);
-        if (rb_windows7.isChecked()) {
-            secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, windows);
-            secondaryScreen.putExtra(MAINACTIVITY_VERSION, windows7);
-        } else if (rb_windows10.isChecked()) {
-            secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, windows);
-            secondaryScreen.putExtra(MAINACTIVITY_VERSION, windows10);
-        } else if (rb_windows11.isChecked()) {
-            secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, windows);
-            secondaryScreen.putExtra(MAINACTIVITY_VERSION, windows11);
-        } else if (rb_ubuntu.isChecked()) {
-            secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, linux);
-            secondaryScreen.putExtra(MAINACTIVITY_VERSION, ubuntu);
-        } else if (rb_red_hat.isChecked()) {
-            secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, linux);
-            secondaryScreen.putExtra(MAINACTIVITY_VERSION, red_hat);
-        } else if (rb_linux_others.isChecked()) {
-            secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, linux);
-            secondaryScreen.putExtra(MAINACTIVITY_VERSION, linux_others);
-        } else if (selectedItem.equals(ios)) {
-            secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, ios);
-            secondaryScreen.putExtra(MAINACTIVITY_VERSION, "No available version");
+        if (!isSelected) {
+            Toast.makeText(this, "Select an operating system", Toast.LENGTH_SHORT).show();
+        } else if (!rb_windows7.isChecked() && !rb_windows10.isChecked() && !rb_windows10.isChecked() && !rb_ubuntu.isChecked() && !rb_red_hat.isChecked() && !rb_linux_others.isChecked()) {
+            Toast.makeText(this, "Select a version", Toast.LENGTH_SHORT).show();
         } else {
-            secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, others);
-            secondaryScreen.putExtra(MAINACTIVITY_VERSION, "No available version");
+            Intent secondaryScreen = new Intent(this, MainActivity2.class);
+            if (rb_windows7.isChecked()) {
+                secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, windows);
+                secondaryScreen.putExtra(MAINACTIVITY_VERSION, windows7);
+            } else if (rb_windows10.isChecked()) {
+                secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, windows);
+                secondaryScreen.putExtra(MAINACTIVITY_VERSION, windows10);
+            } else if (rb_windows11.isChecked()) {
+                secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, windows);
+                secondaryScreen.putExtra(MAINACTIVITY_VERSION, windows11);
+            } else if (rb_ubuntu.isChecked()) {
+                secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, linux);
+                secondaryScreen.putExtra(MAINACTIVITY_VERSION, ubuntu);
+            } else if (rb_red_hat.isChecked()) {
+                secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, linux);
+                secondaryScreen.putExtra(MAINACTIVITY_VERSION, red_hat);
+            } else if (rb_linux_others.isChecked()) {
+                secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, linux);
+                secondaryScreen.putExtra(MAINACTIVITY_VERSION, linux_others);
+            } else if (selectedItem.equals(ios)) {
+                secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, ios);
+                secondaryScreen.putExtra(MAINACTIVITY_VERSION, "No available version");
+            } else {
+                secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, others);
+                secondaryScreen.putExtra(MAINACTIVITY_VERSION, "No available version");
+            }
+            startActivity(secondaryScreen);
         }
-        startActivity(secondaryScreen);
     }
 }
