@@ -14,10 +14,15 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class MainActivity extends AppCompatActivity {
 
     protected final static String MAINACTIVITY_OPERATING_SYSTEM = "com.example.listviewexample.operating_system";
     protected final static String MAINACTIVITY_VERSION = "com.example.listviewexample.version";
+
+    String selectedItem;
 
     TextView tv_select_fruit;
     ListView lv_operating_systems;
@@ -46,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         lv_operating_systems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String selectedItem = (String) parent.getItemAtPosition(position);
+                selectedItem = (String) parent.getItemAtPosition(position);
                 Toast.makeText(parent.getContext(), "OS selected: " + selectedItem, Toast.LENGTH_SHORT).show();
                 switch (selectedItem) {
                     case "Windows":
@@ -83,9 +88,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void loadInfo(View v) {
         String windows = "Windows";
-        String windows7 = "Windows 7";
-        String windows10 = "Windows 10";
-        String windows11 = "Windows 11";
+        String windows7 = "7";
+        String windows10 = "10";
+        String windows11 = "11";
         String linux = "Linux";
         String ubuntu = "Ubuntu";
         String red_hat = "RedHat";
@@ -112,8 +117,10 @@ public class MainActivity extends AppCompatActivity {
         } else if (rb_linux_others.isChecked()) {
             secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, linux);
             secondaryScreen.putExtra(MAINACTIVITY_VERSION, linux_others);
-        } else {
+        } else if(selectedItem == ios) {
             secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, ios);
+            secondaryScreen.putExtra(MAINACTIVITY_VERSION, "No available version");
+        } else {
             secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, others);
             secondaryScreen.putExtra(MAINACTIVITY_VERSION, "No available version");
         }
