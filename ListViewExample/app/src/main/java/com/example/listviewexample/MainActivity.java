@@ -22,13 +22,12 @@ public class MainActivity extends AppCompatActivity {
     protected final static String MAINACTIVITY_OPERATING_SYSTEM = "com.example.listviewexample.operating_system";
     protected final static String MAINACTIVITY_VERSION = "com.example.listviewexample.version";
 
-    String selectedItem;
-
     TextView tv_select_fruit;
     ListView lv_operating_systems;
     RadioButton rb_windows7, rb_windows10, rb_windows11, rb_ubuntu, rb_red_hat, rb_linux_others;
     RadioGroup rg_windows_versions, rg_linux_versions;
     Button btn_load_info;
+    String selectedItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (rb_linux_others.isChecked()) {
             secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, linux);
             secondaryScreen.putExtra(MAINACTIVITY_VERSION, linux_others);
-        } else if(selectedItem.equals(ios)) {
+        } else if (selectedItem.equals(ios)) {
             secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, ios);
             secondaryScreen.putExtra(MAINACTIVITY_VERSION, "No available version");
         } else {
