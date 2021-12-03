@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (rb_linux_others.isChecked()) {
             secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, linux);
             secondaryScreen.putExtra(MAINACTIVITY_VERSION, linux_others);
-        } else if(selectedItem == ios) {
+        } else if(selectedItem.equals(ios)) {
             secondaryScreen.putExtra(MAINACTIVITY_OPERATING_SYSTEM, ios);
             secondaryScreen.putExtra(MAINACTIVITY_VERSION, "No available version");
         } else {
