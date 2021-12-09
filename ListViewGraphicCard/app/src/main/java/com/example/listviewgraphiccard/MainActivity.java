@@ -22,11 +22,6 @@ public class MainActivity extends AppCompatActivity {
     String selectedItem;
     boolean isSelected;
 
-    private int select_1030 = 0;
-    private int select_2060 = 0;
-    private int select_3060 = 0;
-    private int select_3090 = 0;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,9 +69,9 @@ public class MainActivity extends AppCompatActivity {
         String gc_3060 = "3060";
         String gc_3090 = "3090";
 
-        if(!isSelected) {
-            Toast.makeText(this, "Select an item", Toast.LENGTH_SHORT).show();
-        } else {
+        //if(!isSelected) {
+          //  Toast.makeText(this, "Select an item", Toast.LENGTH_SHORT).show();
+        //} else {
             Intent secondaryScreen = new Intent(this, MainActivity2.class);
             if(selectedItem.equals(gc_1030)) {
                 secondaryScreen.putExtra(MAINACTIVITY_GRAPHIC_CARD, gc_1030);
@@ -88,6 +83,6 @@ public class MainActivity extends AppCompatActivity {
                 secondaryScreen.putExtra(MAINACTIVITY_GRAPHIC_CARD, gc_3090);
             }
             startActivity(secondaryScreen);
-        }
+        //}
     }
 }
