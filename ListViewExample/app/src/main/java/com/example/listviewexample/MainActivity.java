@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
         String[] os = {"Windows", "Linux", "iOS", "Others"};
 
-        ArrayAdapter aa_os = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, os);
+        ArrayAdapter aa_os = new ArrayAdapter<String>(this, R.layout.list_view_custom, R.id.tv_aux, os);
 
         lv_operating_systems.setAdapter(aa_os);
 
