@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (!isSelected) {
             Toast.makeText(this, "Select an operating system", Toast.LENGTH_SHORT).show();
-        } else if (!rb_windows7.isChecked() && !rb_windows10.isChecked() && !rb_windows10.isChecked() && !rb_ubuntu.isChecked() && !rb_red_hat.isChecked() && !rb_linux_others.isChecked()) {
+        } else if (!rb_windows7.isChecked() && !rb_windows10.isChecked() && !rb_windows10.isChecked() && !rb_ubuntu.isChecked() && !rb_red_hat.isChecked() && !rb_linux_others.isChecked() && !selectedItem.equals(ios) && !selectedItem.equals(others)) {
             Toast.makeText(this, "Select a version", Toast.LENGTH_SHORT).show();
         } else {
             Intent secondaryScreen = new Intent(this, MainActivity2.class);
