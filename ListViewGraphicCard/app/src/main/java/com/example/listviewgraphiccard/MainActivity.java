@@ -12,15 +12,19 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
-    protected final static String MAINACTIVITY_GRAPHIC_CARD = "com.example.listviewgraphiccard.graphic_card";
+    protected final static String MAINACTIVITY_GRAPHIC_CARD = "com.example.listviewgraphiccard.graphic_card1";
 
     TextView tv_select_item;
     ListView lv_graphic_cards;
     Button btn_load_info;
     String selectedItem;
     boolean isSelected;
+
+    private ArrayList<String> chosen = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +37,6 @@ public class MainActivity extends AppCompatActivity {
 
         String[] gc = {"1030", "2060", "3060", "3090"};
 
-        int[] values = {0, 0, 0, 0};
-
         ArrayAdapter aa_gc = new ArrayAdapter<String>(this, R.layout.list_view_graphic_card, R.id.tv_aux_gc, gc);
 
         lv_graphic_cards.setAdapter(aa_gc);
@@ -45,13 +47,13 @@ public class MainActivity extends AppCompatActivity {
                 selectedItem = (String) parent.getItemAtPosition(i);
                 Toast.makeText(parent.getContext(), "Graphic card selected: " + selectedItem, Toast.LENGTH_SHORT).show();
                 if (selectedItem.equals("1030")) {
-                    values[i] = values[i]++;
+                    chosen.add(parent.getItemAtPosition(i).toString());
                 } else if (selectedItem.equals("2060")) {
-                    values[i] = values[i]++;
+                    chosen.add(parent.getItemAtPosition(i).toString());
                 } else if (selectedItem.equals("3060")) {
-                    values[i] = values[i]++;
+                    chosen.add(parent.getItemAtPosition(i).toString());
                 } else {
-                    values[i] = values[i]++;
+                    chosen.add(parent.getItemAtPosition(i).toString());
                 }
             }
         });
@@ -64,24 +66,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void loadInfo(View v) {
-        String gc_1030 = "1030";
-        String gc_2060 = "2060";
-        String gc_3060 = "3060";
-        String gc_3090 = "3090";
-
         //if(!isSelected) {
           //  Toast.makeText(this, "Select an item", Toast.LENGTH_SHORT).show();
         //} else {
             Intent secondaryScreen = new Intent(this, MainActivity2.class);
-            if(selectedItem.equals(gc_1030)) {
-                secondaryScreen.putExtra(MAINACTIVITY_GRAPHIC_CARD, gc_1030);
-            } else if (selectedItem.equals(gc_2060)) {
-                secondaryScreen.putExtra(MAINACTIVITY_GRAPHIC_CARD, gc_2060);
-            } else if (selectedItem.equals(gc_3060)) {
-                secondaryScreen.putExtra(MAINACTIVITY_GRAPHIC_CARD, gc_3060);
-            } else {
-                secondaryScreen.putExtra(MAINACTIVITY_GRAPHIC_CARD, gc_3090);
-            }
+            secondaryScreen.putExtra(MAINACTIVITY_GRAPHIC_CARD, chosen);
             startActivity(secondaryScreen);
         //}
     }

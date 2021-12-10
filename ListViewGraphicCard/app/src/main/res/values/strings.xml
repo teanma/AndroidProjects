@@ -3,7 +3,7 @@
     <string name="btn_load_info">LOAD</string>
     <string name="tv_select_item">Select the items from the following list</string>
     <string name="tv_aux_gc">TextView</string>
-    <string name="tv_items">Items</string>
+    <string name="tv_items">Cart</string>
     <string name="tv_1030">1030:</string>
     <string name="tv_2060">2060:</string>
     <string name="tv_3060">3060:</string>
@@ -12,4 +12,5 @@
     <string name="tv_2060_quantity" />
     <string name="tv_3060_quantity" />
     <string name="tv_3090_quantity" />
+    <string name="btn_backToHome">HOME</string>
 </resources>

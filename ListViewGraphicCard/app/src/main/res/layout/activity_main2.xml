@@ -17,82 +17,24 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_1030"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="101dp"
-        android:layout_marginTop="94dp"
-        android:text="@string/tv_1030"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_2060"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="101dp"
-        android:layout_marginTop="12dp"
-        android:text="@string/tv_2060"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_1030" />
-
-    <TextView
-        android:id="@+id/tv_3060"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="101dp"
-        android:layout_marginTop="14dp"
-        android:text="@string/tv_3060"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_2060" />
-
-    <TextView
-        android:id="@+id/tv_3090"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="101dp"
-        android:layout_marginTop="11dp"
-        android:text="@string/tv_3090"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_3060" />
-
-    <TextView
-        android:id="@+id/tv_1030_quantity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="94dp"
-        android:layout_marginEnd="164dp"
+        android:id="@+id/tv_quantity"
+        android:layout_width="234dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="92dp"
         android:text="@string/tv_1030_quantity"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_2060_quantity"
+    <Button
+        android:id="@+id/btn_backToHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="126dp"
-        android:layout_marginEnd="164dp"
-        android:text="@string/tv_2060_quantity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_3060_quantity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="159dp"
-        android:layout_marginEnd="164dp"
-        android:text="@string/tv_3060_quantity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_3090_quantity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="190dp"
-        android:layout_marginEnd="164dp"
-        android:text="@string/tv_3090_quantity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="120dp"
+        android:onClick="backToHome"
+        android:text="@string/btn_backToHome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_items" />
 </androidx.constraintlayout.widget.ConstraintLayout>
