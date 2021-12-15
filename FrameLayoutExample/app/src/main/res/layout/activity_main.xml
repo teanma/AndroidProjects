@@ -55,13 +55,14 @@
         android:text="@string/et_right_bottom"
         tools:text="@string/et_right_bottom" />
 
-    <Button
-        android:id="@+id/btn_move_widgets"
+    <CheckBox
+        android:id="@+id/cb_move_widgets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:checked="false"
+        android:clickable="false"
         android:onClick="moveWidgets"
-        android:text="@string/btn_move_widgets"
-        tools:text="@string/btn_move_widgets" />
+        android:text="@string/cb_move_widgets" />
 
 </FrameLayout>
