@@ -10,6 +10,7 @@
         android:id="@+id/iv_dell"
         android:layout_width="163dp"
         android:layout_height="142dp"
+        android:layout_gravity="top|left"
         android:contentDescription="@string/iv_dell"
         app:srcCompat="@drawable/sobremesa_dell" />
 
@@ -17,6 +18,7 @@
         android:id="@+id/iv_hp"
         android:layout_width="163dp"
         android:layout_height="142dp"
+        android:layout_gravity="bottom|left"
         android:contentDescription="@string/iv_hp"
         app:srcCompat="@drawable/sobremesa_hp" />
 
@@ -24,6 +26,7 @@
         android:id="@+id/et_top_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/et_top_right"
@@ -34,18 +37,31 @@
         android:id="@+id/et_left_center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center|left"
         android:ems="10"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:text="@string/et_left_center"
+        android:textAlignment="center"
         tools:text="@string/et_left_center" />
 
     <EditText
         android:id="@+id/et_right_bottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/et_right_bottom"
         tools:text="@string/et_right_bottom" />
+
+    <Button
+        android:id="@+id/btn_move_widgets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="moveWidgets"
+        android:text="@string/btn_move_widgets"
+        tools:text="@string/btn_move_widgets" />
 
 </FrameLayout>

@@ -5,4 +5,5 @@
     <string name="et_top_right">Top right</string>
     <string name="iv_dell">Dell</string>
     <string name="iv_hp">Hp</string>
+    <string name="btn_move_widgets">MOVE</string>
 </resources>
