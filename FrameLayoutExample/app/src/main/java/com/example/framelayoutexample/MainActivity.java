@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         FrameLayout.LayoutParams top_right_params = (FrameLayout.LayoutParams) et_top_right.getLayoutParams();
         FrameLayout.LayoutParams left_center_params = (FrameLayout.LayoutParams) et_left_center.getLayoutParams();
         FrameLayout.LayoutParams right_bottom_params = (FrameLayout.LayoutParams) et_right_bottom.getLayoutParams();
+        FrameLayout.LayoutParams cb_move_widgets_params = (FrameLayout.LayoutParams) cb_move_widgets.getLayoutParams();
 
         if (cb_move_widgets.isChecked()) {
             dell_params.gravity = Gravity.BOTTOM | Gravity.RIGHT;
@@ -62,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
             et_left_center.setLayoutParams(left_center_params);
             right_bottom_params.gravity = Gravity.BOTTOM | Gravity.LEFT;
             et_right_bottom.setLayoutParams(right_bottom_params);
+            cb_move_widgets_params.gravity = Gravity.CENTER | Gravity.LEFT;
+            cb_move_widgets.setLayoutParams(cb_move_widgets_params);
         } else {
             dell_params.gravity = Gravity.LEFT | Gravity.TOP;
             iv_dell.setLayoutParams(dell_params);
@@ -78,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
             et_left_center.setLayoutParams(left_center_params);
             right_bottom_params.gravity = Gravity.BOTTOM | Gravity.RIGHT;
             et_right_bottom.setLayoutParams(right_bottom_params);
+            cb_move_widgets_params.gravity = Gravity.CENTER | Gravity.RIGHT;
+            cb_move_widgets.setLayoutParams(cb_move_widgets_params);
         }
     }
 }

@@ -42,7 +42,6 @@
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:text="@string/et_left_center"
-        android:textAlignment="center"
         tools:text="@string/et_left_center" />
 
     <EditText
@@ -59,7 +58,7 @@
         android:id="@+id/cb_move_widgets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="center|right"
         android:checked="false"
         android:clickable="false"
         android:onClick="moveWidgets"
