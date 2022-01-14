@@ -81,25 +81,24 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="50dp">
+            android:layout_height="match_parent">
 
             <Button
                 android:id="@+id/button4"
                 android:layout_width="0dp"
-                android:layout_height="100dp"
+                android:layout_height="150dp"
                 android:layout_weight="1" />
 
             <Button
                 android:id="@+id/button5"
                 android:layout_width="0dp"
-                android:layout_height="100dp"
+                android:layout_height="150dp"
                 android:layout_weight="1" />
 
             <Button
                 android:id="@+id/button6"
                 android:layout_width="0dp"
-                android:layout_height="100dp"
+                android:layout_height="150dp"
                 android:layout_weight="1" />
         </TableRow>
 
@@ -110,19 +109,19 @@
             <Button
                 android:id="@+id/button8"
                 android:layout_width="0dp"
-                android:layout_height="100dp"
+                android:layout_height="150dp"
                 android:layout_weight="1" />
 
             <Button
                 android:id="@+id/button9"
                 android:layout_width="0dp"
-                android:layout_height="100dp"
+                android:layout_height="150dp"
                 android:layout_weight="1" />
 
             <Button
                 android:id="@+id/button10"
                 android:layout_width="0dp"
-                android:layout_height="100dp"
+                android:layout_height="150dp"
                 android:layout_weight="1" />
         </TableRow>
 
@@ -133,19 +132,19 @@
             <Button
                 android:id="@+id/button11"
                 android:layout_width="0dp"
-                android:layout_height="100dp"
+                android:layout_height="150dp"
                 android:layout_weight="1" />
 
             <Button
                 android:id="@+id/button12"
                 android:layout_width="0dp"
-                android:layout_height="100dp"
+                android:layout_height="150dp"
                 android:layout_weight="1" />
 
             <Button
                 android:id="@+id/button13"
                 android:layout_width="0dp"
-                android:layout_height="100dp"
+                android:layout_height="150dp"
                 android:layout_weight="1" />
         </TableRow>
     </TableLayout>
