@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tarea4_Layouts</string>
+    <string name="respuesta2">Opensource Framework, usado para escribir y ejecutar tests</string>
+    <string name="respuesta3">Opensource Framework, el cual traduce bytecode a código binario</string>
+</resources>
