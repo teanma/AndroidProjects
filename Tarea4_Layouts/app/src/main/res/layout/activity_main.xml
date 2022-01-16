@@ -16,7 +16,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/iv_kahoot"
                 android:layout_width="wrap_content"
                 android:layout_height="254dp"
                 app:srcCompat="@drawable/kahoot_actividad1" />
@@ -27,13 +27,14 @@
             android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/editTextTextPersonName2"
+                android:id="@+id/et_nick"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Nick" />
+                android:text="@string/et_nick"
+                tools:ignore="TouchTargetSizeCheck" />
         </TableRow>
 
         <TableRow
@@ -51,11 +52,11 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btn_iniciar_juego"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Iniciar juego" />
+                android:text="@string/btn_iniciar_juego" />
         </TableRow>
 
     </TableLayout>

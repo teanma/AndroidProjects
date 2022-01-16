@@ -18,12 +18,12 @@
             android:gravity="center">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/tv_pregunta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@color/white"
-                android:text="¿Qué es JUnit?"
+                android:text="@string/tv_pregunta"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="24sp"
@@ -35,26 +35,29 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="70dp"
+                android:id="@+id/iv_contador"
+                android:layout_width="85dp"
                 android:layout_height="match_parent"
-                android:layout_weight="2"
+                android:layout_weight="1"
+                android:contentDescription="@string/iv_contador"
                 app:srcCompat="@drawable/kahoot_tiempo" />
 
             <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
-                android:layout_height="260dp"
+                android:id="@+id/iv_test"
+                android:layout_width="505dp"
+                android:layout_height="273dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/kahoot_actividad2_central" />
+                android:contentDescription="@string/iv_test"
+                app:srcCompat="@drawable/kahoot_actividad2_central"
+                tools:ignore="ImageContrastCheck" />
 
             <Button
-                android:id="@+id/button"
-                android:layout_width="64dp"
+                android:id="@+id/btn_omitir"
+                android:layout_width="67dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Omitir"
-                android:textSize="8sp" />
+                android:text="@string/btn_omitir"
+                android:textSize="10sp" />
         </TableRow>
 
         <TableRow
@@ -62,12 +65,12 @@
             android:layout_height="match_parent" >
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/btn_respuesta1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="@android:color/holo_red_dark"
-                android:text="Java Development Kit"
+                android:text="@string/btn_respuesta1"
                 android:textAlignment="textStart"
                 android:textSize="10sp" />
         </TableRow>
@@ -77,14 +80,15 @@
             android:layout_height="match_parent" >
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/btn_respuesta2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#FFC107"
+                android:backgroundTint="#DDA704"
                 android:text="@string/respuesta2"
                 android:textAlignment="textStart"
-                android:textSize="10sp" />
+                android:textSize="10sp"
+                tools:ignore="TextContrastCheck" />
         </TableRow>
 
         <TableRow
@@ -92,14 +96,15 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/btn_respuesta3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#E8215CF3"
                 android:text="@string/respuesta3"
                 android:textAlignment="textStart"
-                android:textSize="10sp" />
+                android:textSize="10sp"
+                tools:ignore="TextContrastCheck" />
         </TableRow>
 
         <TableRow
@@ -107,19 +112,55 @@
             android:layout_height="match_parent" >
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/btn_respuesta4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#07830E"
-                android:text="Ninguno de los anteriores"
+                android:text="@string/btn_respuesta4"
                 android:textAlignment="textStart"
-                android:textSize="10sp" />
+                android:textSize="10sp"
+                tools:ignore="TextContrastCheck" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/tv_num_preguntas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/numero_preguntas"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_pagina_web"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/pagina_web"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_pin_juego"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pin_juego"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/tv_pin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pin"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </TableRow>
 
     </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

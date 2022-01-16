@@ -1,5 +1,17 @@
 <resources>
     <string name="app_name">Tarea4_Layouts</string>
+    <string name="et_nick">Nick</string>
+    <string name="btn_iniciar_juego">Iniciar juego</string>
+    <string name="tv_pregunta">¿Qué es JUnit?</string>
+    <string name="iv_contador">Contador</string>
+    <string name="iv_test">Test</string>
+    <string name="btn_omitir">Omitir</string>
+    <string name="btn_respuesta1">Java Development Kit</string>
     <string name="respuesta2">Opensource Framework, usado para escribir y ejecutar tests</string>
     <string name="respuesta3">Opensource Framework, el cual traduce bytecode a código binario</string>
+    <string name="btn_respuesta4">Ninguno de los anteriores</string>
+    <string name="numero_preguntas">1/15</string>
+    <string name="pagina_web">kahoot.it </string>
+    <string name="pin_juego">Pin de juego: </string>
+    <string name="pin">244073</string>
 </resources>
