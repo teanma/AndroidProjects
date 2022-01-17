@@ -28,7 +28,8 @@
         <TextView
             android:id="@+id/tv_respuesta_jugador"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/tv_respuesta_jugador" />
 
         <Button
             android:id="@+id/btn_respuesta_incorrecta"
@@ -41,10 +42,11 @@
         <TextView
             android:id="@+id/tv_respuesta_correcta"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/tv_respuesta_correcta" />
 
         <Button
-            android:id="@+id/btn_resp2"
+            android:id="@+id/btn_respuesta_correcta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#DDA704"

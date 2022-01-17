@@ -14,4 +14,6 @@
     <string name="pagina_web">kahoot.it </string>
     <string name="pin_juego">Pin de juego: </string>
     <string name="pin">244073</string>
+    <string name="tv_respuesta_jugador">Respuesta del jugador:</string>
+    <string name="tv_respuesta_correcta">Respuesta correcta:</string>
 </resources>
