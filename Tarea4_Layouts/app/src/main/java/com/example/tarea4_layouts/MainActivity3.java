@@ -36,8 +36,8 @@ public class MainActivity3 extends AppCompatActivity {
             btn_respuesta_incorrecta.setVisibility(View.GONE);
             tv_respuesta_correcta.setVisibility(View.GONE);
         } else {
-            //Button btn_respuesta_incorrecta = (Button) findViewById(R.id.btn_respuesta_incorrecta);
-            //btn_respuesta_incorrecta.setText(respuesta);
+            btn_respuesta_incorrecta = (Button) findViewById(R.id.btn_respuesta_incorrecta);
+            btn_respuesta_incorrecta.setText(respuesta);
             tv_mensaje_respuesta.setText("Lo sentimos, " + nick + ", has fallado");
             //btn_respuesta_correcta.setVisibility(View.VISIBLE);
             //tv_respuesta_jugador.setVisibility(View.VISIBLE);
