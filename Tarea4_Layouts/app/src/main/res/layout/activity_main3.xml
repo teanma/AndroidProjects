@@ -37,6 +37,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/holo_red_dark"
             android:textAlignment="textStart"
+            android:textSize="10sp"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView

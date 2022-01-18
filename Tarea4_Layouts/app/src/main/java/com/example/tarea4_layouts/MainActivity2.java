@@ -52,7 +52,7 @@ public class MainActivity2 extends AppCompatActivity {
         String respuesta3 = "Opensource Framework, el cual traduce bytecode a código binario";
         String respuesta4 = "Ninguno de los anteriores";
 
-        Intent pantallaTernaria = new Intent(this, MainActivity2.class);
+        Intent pantallaTernaria = new Intent(this, MainActivity3.class);
         if (btn_respuesta1.isClickable()) {
             pantallaTernaria.putExtra(MAINACTIVITY_NICK, nick);
             pantallaTernaria.putExtra(MAINACTIVITY2_RESPUESTA, respuesta1);
