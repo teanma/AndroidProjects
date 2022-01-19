@@ -42,33 +42,43 @@ public class MainActivity2 extends AppCompatActivity {
         btn_respuesta4 = (Button) findViewById(R.id.btn_respuesta4);
     }
 
-    public void respuesta(View v) {
-
+    public void respuesta1(View v) {
         Intent pantallaPrincipal = getIntent();
+        String respuesta1 = "Java Development KIt";
         String nick = pantallaPrincipal.getStringExtra(MainActivity.MAINACTIVITY_NICK);
-
-        String respuesta1 = "Java Development Kit";
-        String respuesta2 = "Opensource Framework, usado para escribir y ejecutar tests";
-        String respuesta3 = "Opensource Framework, el cual traduce bytecode a código binario";
-        String respuesta4 = "Ninguno de los anteriores";
-
         Intent pantallaTernaria = new Intent(this, MainActivity3.class);
-        if (btn_respuesta1.isClickable()) {
-            pantallaTernaria.putExtra(MAINACTIVITY_NICK, nick);
-            pantallaTernaria.putExtra(MAINACTIVITY2_RESPUESTA, respuesta1);
-        }
-        if (btn_respuesta2.isClickable()) {
-            pantallaTernaria.putExtra(MAINACTIVITY_NICK, nick);
-            pantallaTernaria.putExtra(MAINACTIVITY2_RESPUESTA, respuesta2);
-        }
-        if (btn_respuesta3.isClickable()) {
-            pantallaTernaria.putExtra(MAINACTIVITY_NICK, nick);
-            pantallaTernaria.putExtra(MAINACTIVITY2_RESPUESTA, respuesta3);
-        }
-        if (btn_respuesta4.isClickable()) {
-            pantallaTernaria.putExtra(MAINACTIVITY_NICK, nick);
-            pantallaTernaria.putExtra(MAINACTIVITY2_RESPUESTA, respuesta4);
-        }
+        pantallaTernaria.putExtra(MAINACTIVITY_NICK, nick);
+        pantallaTernaria.putExtra(MAINACTIVITY2_RESPUESTA, respuesta1);
+        startActivity(pantallaTernaria);
+    }
+
+    public void respuesta2(View v) {
+        Intent pantallaPrincipal = getIntent();
+        String respuesta2 = "Opensource Framework, usado para escribir y ejecutar tests";
+        String nick = pantallaPrincipal.getStringExtra(MainActivity.MAINACTIVITY_NICK);
+        Intent pantallaTernaria = new Intent(this, MainActivity3.class);
+        pantallaTernaria.putExtra(MAINACTIVITY_NICK, nick);
+        pantallaTernaria.putExtra(MAINACTIVITY2_RESPUESTA, respuesta2);
+        startActivity(pantallaTernaria);
+    }
+
+    public void respuesta3(View v) {
+        Intent pantallaPrincipal = getIntent();
+        String respuesta3 = "Opensource Framework, el cual traduce bytecode a código binario";
+        String nick = pantallaPrincipal.getStringExtra(MainActivity.MAINACTIVITY_NICK);
+        Intent pantallaTernaria = new Intent(this, MainActivity3.class);
+        pantallaTernaria.putExtra(MAINACTIVITY_NICK, nick);
+        pantallaTernaria.putExtra(MAINACTIVITY2_RESPUESTA, respuesta3);
+        startActivity(pantallaTernaria);
+    }
+
+    public void respuesta4(View v) {
+        Intent pantallaPrincipal = getIntent();
+        String respuesta4 = "Ninguno de los anteriores";
+        String nick = pantallaPrincipal.getStringExtra(MainActivity.MAINACTIVITY_NICK);
+        Intent pantallaTernaria = new Intent(this, MainActivity3.class);
+        pantallaTernaria.putExtra(MAINACTIVITY_NICK, nick);
+        pantallaTernaria.putExtra(MAINACTIVITY2_RESPUESTA, respuesta4);
         startActivity(pantallaTernaria);
     }
 }
