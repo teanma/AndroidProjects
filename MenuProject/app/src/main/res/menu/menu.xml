@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mi_compartir"
+        android:title="Compartir" />
+    <item
+        android:id="@+id/mi_generar_pdf"
+        android:title="Generar PDF" />
+    <item
+        android:id="@+id/mi_imprimir"
+        android:title="Imprimir" />
+    <item
+        android:id="@+id/mi_enviar"
+        android:title="Enviar" />
+    <item
+        android:id="@+id/mi_marcar"
+        android:title="Marcar como pagada" />
+    <item
+        android:id="@+id/mi_siguiente"
+        android:title="Siguiente" />
+</menu>
