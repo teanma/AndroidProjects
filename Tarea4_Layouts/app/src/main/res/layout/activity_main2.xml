@@ -58,7 +58,7 @@
                 android:layout_gravity="center"
                 android:backgroundTint="#673AB7"
                 android:text="@string/btn_omitir"
-                android:textSize="10sp" />
+                android:textSize="11sp" />
         </TableRow>
 
         <TableRow
@@ -74,7 +74,7 @@
                 android:onClick="respuesta1"
                 android:text="@string/btn_respuesta1"
                 android:textAlignment="textStart"
-                android:textSize="10sp" />
+                android:textSize="11sp" />
         </TableRow>
 
         <TableRow
@@ -90,7 +90,7 @@
                 android:onClick="respuesta2"
                 android:text="@string/respuesta2"
                 android:textAlignment="textStart"
-                android:textSize="10sp"
+                android:textSize="11sp"
                 tools:ignore="TextContrastCheck" />
         </TableRow>
 
@@ -107,7 +107,7 @@
                 android:onClick="respuesta3"
                 android:text="@string/respuesta3"
                 android:textAlignment="textStart"
-                android:textSize="10sp"
+                android:textSize="11sp"
                 tools:ignore="TextContrastCheck" />
         </TableRow>
 
@@ -124,7 +124,7 @@
                 android:onClick="respuesta4"
                 android:text="@string/btn_respuesta4"
                 android:textAlignment="textStart"
-                android:textSize="10sp"
+                android:textSize="11sp"
                 tools:ignore="TextContrastCheck" />
         </TableRow>
 

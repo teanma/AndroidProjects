@@ -19,6 +19,7 @@
                 android:id="@+id/iv_kahoot"
                 android:layout_width="wrap_content"
                 android:layout_height="254dp"
+                android:contentDescription="@string/iv_kahoot"
                 app:srcCompat="@drawable/kahoot_actividad1" />
         </TableRow>
 

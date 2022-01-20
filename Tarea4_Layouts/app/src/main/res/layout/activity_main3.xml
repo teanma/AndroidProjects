@@ -29,7 +29,8 @@
             android:id="@+id/tv_respuesta_jugador"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/tv_respuesta_jugador" />
+            android:text="@string/tv_respuesta_jugador"
+            tools:ignore="TextContrastCheck,TextContrastCheck" />
 
         <Button
             android:id="@+id/btn_respuesta_incorrecta"
@@ -37,14 +38,15 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/holo_red_dark"
             android:textAlignment="textStart"
-            android:textSize="10sp"
+            android:textSize="11sp"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/tv_respuesta_correcta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/tv_respuesta_correcta" />
+            android:text="@string/tv_respuesta_correcta"
+            tools:ignore="TextContrastCheck" />
 
         <Button
             android:id="@+id/btn_respuesta_correcta"
@@ -53,7 +55,7 @@
             android:backgroundTint="#DDA704"
             android:text="@string/respuesta2"
             android:textAlignment="textStart"
-            android:textSize="10sp"
+            android:textSize="11sp"
             tools:ignore="TextContrastCheck" />
 
         <TextView

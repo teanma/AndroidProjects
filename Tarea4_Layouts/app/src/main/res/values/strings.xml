@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Tarea4_Layouts</string>
+    <string name="iv_kahoot">Kahoot</string>
     <string name="et_nick">Nick</string>
     <string name="btn_iniciar_juego">Iniciar juego</string>
     <string name="tv_pregunta">¿Qué es JUnit?</string>
