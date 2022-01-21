@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mi_manzanas"
+        android:title="Manzanas">
+        <menu>
+            <item
+                android:id="@+id/submi_golden"
+                android:title="Golden" />
+            <item
+                android:id="@+id/submi_pink_lady"
+                android:title="Pink Lady" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/mi_platanos"
+        android:title="Plátanos" />
+    <item
+        android:id="@+id/mi_peras"
+        android:title="Peras">
+        <menu>
+            <item
+                android:id="@+id/submi_conferencia"
+                android:title="Conferencia" />
+            <item
+                android:id="@+id/submi_limonera"
+                android:title="Limonera" />
+        </menu>
+    </item>
+</menu>
