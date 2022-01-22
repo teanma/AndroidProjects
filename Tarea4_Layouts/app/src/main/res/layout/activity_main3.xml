@@ -47,7 +47,7 @@
         android:id="@+id/btn_respuesta_correcta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#DDA704"
+        android:backgroundTint="#C59505"
         android:text="@string/respuesta2"
         android:textAlignment="textStart"
         android:textSize="11sp"
