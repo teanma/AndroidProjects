@@ -103,7 +103,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#E8215CF3"
+                android:backgroundTint="#3F51B5"
                 android:onClick="respuesta3"
                 android:text="@string/respuesta3"
                 android:textAlignment="textStart"
