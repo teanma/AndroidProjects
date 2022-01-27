@@ -4,16 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity2">
 
     <ImageView
-        android:id="@+id/iv_frutas"
-        android:layout_width="325dp"
-        android:layout_height="205dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="288dp"
+        android:id="@+id/iv_selected_fruit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/fruta" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
