@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Tarea5_ListViewMenu</string>
+    <string name="tv_aux_menu_item">TextView</string>
+</resources>
