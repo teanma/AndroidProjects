@@ -2,7 +2,9 @@ package com.example.tarea5_listviewmenu;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.Menu;
@@ -31,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         init();
 
+        registerForContextMenu(lv_items);
+
         ListView itemsList = (ListView) findViewById(R.id.lv_items);
 
         list = new ArrayList<String>();
@@ -56,24 +60,40 @@ public class MainActivity extends AppCompatActivity {
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
 
-        getMenuInflater().inflate(R.menu.menu, menu);
+        //getMenuInflater().inflate(R.menu.menu, menu);
 
-        menu.add(0, 1, 0, "Crear");
-        menu.add(0, 2, 0, "Borrar");
+        menu.setHeaderTitle("Seleccione opción");
+
+        menu.add(0, 1, 0, "Borrar");
     }
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
-        return super.onContextItemSelected(item);
+        ConstraintLayout constraintLayout = (ConstraintLayout) findViewById(R.id.cl_main_activity);
+
+        if(item.getItemId() == 1) {
+            Toast.makeText(this, "Elemento borrado", Toast.LENGTH_SHORT).show();
+            constraintLayout.getContext();
+        }/*// else if(item.getItemId() == 2) {
+            Toast.makeText(this, "Has elegido " + item.getItemId(), Toast.LENGTH_SHORT).show();
+            constraintLayout.getContext();
+        }*/
+        return true;
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        return super.onCreateOptionsMenu(menu);
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.mi_nuevo) {
+            Toast.makeText(this, "Elemento nuevo añadido", Toast.LENGTH_SHORT).show();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
