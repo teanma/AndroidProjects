@@ -72,14 +72,18 @@ public class MainActivity extends AppCompatActivity {
     public boolean onContextItemSelected(MenuItem item) {
         ConstraintLayout constraintLayout = (ConstraintLayout) findViewById(R.id.cl_main_activity);
 
-        if(item.getItemId() == 1) {
-            Toast.makeText(this, "Elemento borrado", Toast.LENGTH_SHORT).show();
-            constraintLayout.getContext();
-        } else if(item.getItemId() == 2) {
-            Toast.makeText(this, "Mostrando detalles", Toast.LENGTH_SHORT).show();
-            constraintLayout.getContext();
+        switch (item.getItemId()) {
+            case 1:
+                Toast.makeText(this, "Elemento borrado", Toast.LENGTH_SHORT).show();
+                constraintLayout.getContext();
+                return true;
+            case 2:
+                Toast.makeText(this, "Mostrando detalles", Toast.LENGTH_SHORT).show();
+                constraintLayout.getContext();
+                return true;
+            default:
+                return super.onContextItemSelected(item);
         }
-        return true;
     }
 
     @Override
@@ -91,11 +95,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.mi_nuevo) {
-            Toast.makeText(this, "Elemento nuevo añadido", Toast.LENGTH_SHORT).show();
-            return true;
+        switch (item.getItemId()) {
+            case R.id.mi_nuevo:
+                Toast.makeText(this, "Elemento nuevo añadido", Toast.LENGTH_SHORT).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
     }
 
     public void init() {
