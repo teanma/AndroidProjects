@@ -50,8 +50,8 @@ public class MainActivity extends AppCompatActivity {
         itemsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
-                selectedItem = (String) parent.getItemAtPosition(i);
-                Toast.makeText(parent.getContext(), "Has elegido " + selectedItem, Toast.LENGTH_SHORT).show();
+                /*selectedItem = (String) parent.getItemAtPosition(i);
+                Toast.makeText(parent.getContext(), "Has elegido " + selectedItem, Toast.LENGTH_SHORT).show();*/
             }
         });
     }
@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         menu.setHeaderTitle("Seleccione opción");
 
         menu.add(0, 1, 0, "Borrar");
+        menu.add(0, 2, 0, "Detalles");
     }
 
     @Override
@@ -74,10 +75,10 @@ public class MainActivity extends AppCompatActivity {
         if(item.getItemId() == 1) {
             Toast.makeText(this, "Elemento borrado", Toast.LENGTH_SHORT).show();
             constraintLayout.getContext();
-        }/*// else if(item.getItemId() == 2) {
-            Toast.makeText(this, "Has elegido " + item.getItemId(), Toast.LENGTH_SHORT).show();
+        } else if(item.getItemId() == 2) {
+            Toast.makeText(this, "Mostrando detalles", Toast.LENGTH_SHORT).show();
             constraintLayout.getContext();
-        }*/
+        }
         return true;
     }
 
