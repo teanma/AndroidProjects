@@ -25,8 +25,6 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayAdapter<String> adapter;
 
-    String selectedItem;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,8 +48,7 @@ public class MainActivity extends AppCompatActivity {
         itemsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
-                /*selectedItem = (String) parent.getItemAtPosition(i);
-                Toast.makeText(parent.getContext(), "Has elegido " + selectedItem, Toast.LENGTH_SHORT).show();*/
+
             }
         });
     }
@@ -59,8 +56,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
-
-        //getMenuInflater().inflate(R.menu.menu, menu);
 
         menu.setHeaderTitle("Seleccione opción");
 
