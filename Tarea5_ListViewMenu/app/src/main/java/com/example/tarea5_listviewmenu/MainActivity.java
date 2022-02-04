@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.Menu;
@@ -42,6 +44,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
+
+        SharedPreferences prefItem = getSharedPreferences("configItem", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editorItem = prefItem.edit();
+        editorItem.putString("itemName", "Nueces");
+        String itemName = prefItem.getString("itemName", "Defecto");
+        editorItem.commit();
+
+        et_elemento_introducido.setText(itemName);
 
         registerForContextMenu(lv_items);
 
