@@ -2,6 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/mi_volver"
-        android:title="@string/mi_volver" />
+        android:id="@+id/mi2_anterior"
+        android:title="@string/mi2_anterior" />
 </menu>

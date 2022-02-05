@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
 
     protected final static String MAINACTIVITY_SELECTED_ITEM = "com.example.tarea5_listviewmenu.selected_item";
 
-
     ListView lv_items;
 
     ArrayList<String> list;
@@ -44,14 +43,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
-
-        SharedPreferences prefItem = getSharedPreferences("configItem", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editorItem = prefItem.edit();
-        editorItem.putString("itemName", "Nueces");
-        String itemName = prefItem.getString("itemName", "Defecto");
-        editorItem.commit();
-
-        et_elemento_introducido.setText(itemName);
 
         registerForContextMenu(lv_items);
 
@@ -74,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
                 selectedItem = list.get(i);
                 secondaryScreen.putExtra(MAINACTIVITY_SELECTED_ITEM, selectedItem);
+                SharedPreferences prefItem = getSharedPreferences("configItem", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editorItem = prefItem.edit();
+                editorItem.putString("selectedItem", selectedItem);
+                editorItem.commit();
                 startActivity(secondaryScreen);
             }
         });
