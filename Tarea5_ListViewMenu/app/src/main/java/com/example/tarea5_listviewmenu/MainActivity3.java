@@ -24,13 +24,13 @@ public class MainActivity3 extends AppCompatActivity {
 
         SharedPreferences prefSelected = getSharedPreferences("configItem", Context.MODE_PRIVATE);
         SharedPreferences.Editor editorItem = prefSelected.edit();
-        String itemName = prefSelected.getString("selectedItem", "defecto");
+        String itemName = prefSelected.getString("selectedItem", "selectedItemValue");
         tv_selected_item.setText(itemName);
-        String nameUser = prefSelected.getString("name", "defecto");
+        String nameUser = prefSelected.getString("name", "nameValue");
         tv_introduced_name.setText(nameUser);
-        String surnameUser = prefSelected.getString("surname", "defecto");
+        String surnameUser = prefSelected.getString("surname", "surnameValue");
         tv_introduced_surname.setText(surnameUser);
-        String ageUser = prefSelected.getString("age", "defecto");
+        String ageUser = prefSelected.getString("age", "ageValue");
         tv_introduced_age.setText(ageUser);
         editorItem.commit();
     }
