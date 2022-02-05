@@ -29,8 +29,8 @@
         android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="102dp"
-        android:layout_marginTop="43dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="48dp"
         android:text="@string/tv_name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_item" />
@@ -39,8 +39,8 @@
         android:id="@+id/tv_introduced_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="266dp"
-        android:layout_marginEnd="188dp"
+        android:layout_marginTop="268dp"
+        android:layout_marginEnd="148dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -48,8 +48,8 @@
         android:id="@+id/tv_surname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="102dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="48dp"
         android:text="@string/tv_surname"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_name" />
@@ -58,8 +58,8 @@
         android:id="@+id/tv_introduced_surname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="329dp"
-        android:layout_marginEnd="188dp"
+        android:layout_marginTop="336dp"
+        android:layout_marginEnd="148dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -67,8 +67,8 @@
         android:id="@+id/tv_age"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="102dp"
-        android:layout_marginTop="38dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="40dp"
         android:text="@string/tv_age"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_surname" />
@@ -77,8 +77,8 @@
         android:id="@+id/tv_introduced_age"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="386dp"
-        android:layout_marginEnd="188dp"
+        android:layout_marginTop="396dp"
+        android:layout_marginEnd="148dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
