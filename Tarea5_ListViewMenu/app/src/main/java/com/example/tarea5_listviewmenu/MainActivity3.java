@@ -22,7 +22,8 @@ public class MainActivity3 extends AppCompatActivity {
         String tv_item = secondaryScreen.getStringExtra(MainActivity.MAINACTIVITY_SELECTED_ITEM);
         String tv_name = secondaryScreen.getStringExtra(MainActivity2.MAINACTIVITY2_NAME);
         String tv_surname = secondaryScreen.getStringExtra(MainActivity2.MAINACTIVITY2_SURNAME);
-        String tv_age = secondaryScreen.getStringExtra(MainActivity2.MAINACTIVITY2_AGE);
+        String tv_intro_age = secondaryScreen.getStringExtra(MainActivity2.MAINACTIVITY2_AGE);
+        //int tv_age = Integer.parseInt(tv_intro_age);
 
         TextView tv_selected_item = (TextView) findViewById(R.id.tv_selected_item);
         TextView tv_introduced_name = (TextView) findViewById(R.id.tv_introduced_name);
@@ -37,7 +38,7 @@ public class MainActivity3 extends AppCompatActivity {
         tv_introduced_name.setText(nameUser);
         String surnameUser = prefItem.getString(getString(R.string.tv_surname), tv_surname);
         tv_introduced_surname.setText(surnameUser);
-        String ageUser = prefItem.getString(getString(R.string.tv_age), tv_age);
+        String ageUser = prefItem.getString(getString(R.string.tv_age), tv_intro_age);
         tv_introduced_age.setText(ageUser);
         editorItem.commit();
     }

@@ -55,6 +55,7 @@ public class MainActivity2 extends AppCompatActivity {
                 String nombre = et_nombre_introducido.getText().toString();
                 String apellido = et_apellido_introducido.getText().toString();
                 String edad = et_edad_introducida.getText().toString();
+                //int edad = Integer.parseInt(edad_introducida);
 
                 if (nombre.isEmpty()) {
                     Toast.makeText(this, "El campo nombre es obligatorio", Toast.LENGTH_SHORT).show();

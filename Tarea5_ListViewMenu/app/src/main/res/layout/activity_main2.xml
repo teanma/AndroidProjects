@@ -67,7 +67,7 @@
         android:layout_marginTop="36dp"
         android:layout_marginEnd="33dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_apellido_introducido"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
