@@ -16,10 +16,6 @@ import android.widget.Toast;
 
 public class MainActivity2 extends AppCompatActivity {
 
-    protected final static String MAINACTIVITY_SELECTED_ITEM = "com.example.tarea5_listviewmenu.selected_item";
-    protected final static String MAINACTIVITY2_NAME = "com.example.tarea5_listviewmenu.name";
-    protected final static String MAINACTIVITY2_SURNAME = "com.example.tarea5_listviewmenu.surname";
-    protected final static String MAINACTIVITY2_AGE = "com.example.tarea5_listviewmenu.age";
 
     TextView tv_nombre, tv_apellido, tv_edad;
 
@@ -48,25 +44,17 @@ public class MainActivity2 extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case 1:
-                mainScreen = getIntent();
-
-                String elemento_seleccionado = mainScreen.getStringExtra(MainActivity.MAINACTIVITY_SELECTED_ITEM);
 
                 String nombre = et_nombre_introducido.getText().toString();
                 String apellido = et_apellido_introducido.getText().toString();
                 String edad = et_edad_introducida.getText().toString();
-                //int edad = Integer.parseInt(edad_introducida);
 
                 if (nombre.isEmpty()) {
                     Toast.makeText(this, "El campo nombre es obligatorio", Toast.LENGTH_SHORT).show();
                 } else {
                     thirdScreen = new Intent(this, MainActivity3.class);
-                    thirdScreen.putExtra(MAINACTIVITY_SELECTED_ITEM, elemento_seleccionado);
-                    thirdScreen.putExtra(MAINACTIVITY2_NAME, nombre);
-                    thirdScreen.putExtra(MAINACTIVITY2_SURNAME, apellido);
-                    thirdScreen.putExtra(MAINACTIVITY2_AGE, edad);
-                    SharedPreferences prefItem = getSharedPreferences("configItem", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editorItem = prefItem.edit();
+                    SharedPreferences prefFormulary = getSharedPreferences("configItem", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editorItem = prefFormulary.edit();
                     editorItem.putString("name", nombre);
                     editorItem.putString("surname", apellido);
                     editorItem.putString("age", edad);
@@ -97,10 +85,6 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     public void guardar(View v) {
-
-        mainScreen = getIntent();
-
-        String elemento_seleccionado = mainScreen.getStringExtra(MainActivity.MAINACTIVITY_SELECTED_ITEM);
         
         String nombre = et_nombre_introducido.getText().toString();
         String apellido = et_apellido_introducido.getText().toString();
@@ -110,10 +94,6 @@ public class MainActivity2 extends AppCompatActivity {
             Toast.makeText(this, "El campo nombre es obligatorio", Toast.LENGTH_SHORT).show();
         } else {
             thirdScreen = new Intent(this, MainActivity3.class);
-            thirdScreen.putExtra(MAINACTIVITY_SELECTED_ITEM, elemento_seleccionado);
-            thirdScreen.putExtra(MAINACTIVITY2_NAME, nombre);
-            thirdScreen.putExtra(MAINACTIVITY2_SURNAME, apellido);
-            thirdScreen.putExtra(MAINACTIVITY2_AGE, edad);
             SharedPreferences prefItem = getSharedPreferences("configItem", Context.MODE_PRIVATE);
             SharedPreferences.Editor editorItem = prefItem.edit();
             editorItem.putString("name", nombre);

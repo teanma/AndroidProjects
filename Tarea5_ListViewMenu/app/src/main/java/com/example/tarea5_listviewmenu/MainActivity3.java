@@ -17,28 +17,20 @@ public class MainActivity3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
-        Intent secondaryScreen = getIntent();
-
-        String tv_item = secondaryScreen.getStringExtra(MainActivity.MAINACTIVITY_SELECTED_ITEM);
-        String tv_name = secondaryScreen.getStringExtra(MainActivity2.MAINACTIVITY2_NAME);
-        String tv_surname = secondaryScreen.getStringExtra(MainActivity2.MAINACTIVITY2_SURNAME);
-        String tv_intro_age = secondaryScreen.getStringExtra(MainActivity2.MAINACTIVITY2_AGE);
-        //int tv_age = Integer.parseInt(tv_intro_age);
-
         TextView tv_selected_item = (TextView) findViewById(R.id.tv_selected_item);
         TextView tv_introduced_name = (TextView) findViewById(R.id.tv_introduced_name);
         TextView tv_introduced_surname = (TextView) findViewById(R.id.tv_introduced_surname);
         TextView tv_introduced_age = (TextView) findViewById(R.id.tv_introduced_age);
 
-        SharedPreferences prefItem = getSharedPreferences("configItem", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editorItem = prefItem.edit();
-        String itemName = prefItem.getString(getString(R.string.tv_item), tv_item);
+        SharedPreferences prefSelected = getSharedPreferences("configItem", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editorItem = prefSelected.edit();
+        String itemName = prefSelected.getString("selectedItem", "defecto");
         tv_selected_item.setText(itemName);
-        String nameUser = prefItem.getString(getString(R.string.tv_name), tv_name);
+        String nameUser = prefSelected.getString("name", "defecto");
         tv_introduced_name.setText(nameUser);
-        String surnameUser = prefItem.getString(getString(R.string.tv_surname), tv_surname);
+        String surnameUser = prefSelected.getString("surname", "defecto");
         tv_introduced_surname.setText(surnameUser);
-        String ageUser = prefItem.getString(getString(R.string.tv_age), tv_intro_age);
+        String ageUser = prefSelected.getString("age", "defecto");
         tv_introduced_age.setText(ageUser);
         editorItem.commit();
     }
