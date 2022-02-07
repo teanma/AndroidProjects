@@ -1,14 +1,19 @@
 <resources>
     <string name="app_name">Tarea5_ListViewMenu</string>
     <string name="tv_aux_menu_item">TextView</string>
-    <string name="tv_item">Item:</string>
+    <string name="pref_file_name">prefConfig</string>
+    <string name="pref_selected_item">selectedItem</string>
+    <string name="pref_name">name</string>
+    <string name="pref_surname">surname</string>
+    <string name="pref_age">age</string>
+    <string name="def_value">value</string>
     <string name="mi2_anterior">Anterior</string>
-    <string name="tv_edad">Edad:</string>
-    <string name="tv_nombre">Nombre:</string>
-    <string name="tv_apellido">Apellido:</string>
     <string name="btn_guardar">Guardar</string>
+    <string name="tv_selected_item">Item:</string>
+    <string name="tv_introd_name">Nombre:</string>
+    <string name="tv_introd_surname">Apellido:</string>
+    <string name="tv_introd_age">Edad:</string>
     <string name="tv_name">Nombre:</string>
     <string name="tv_surname">Apellido:</string>
     <string name="tv_age">Edad:</string>
-    <string name="tv_value">Defecto</string>
 </resources>

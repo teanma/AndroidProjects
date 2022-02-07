@@ -12,27 +12,31 @@ import android.widget.TextView;
 
 public class MainActivity3 extends AppCompatActivity {
 
+    TextView tv_selected_item, tv_introduced_name, tv_introduced_surname, tv_introduced_age;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
-        TextView tv_selected_item = (TextView) findViewById(R.id.tv_selected_item);
-        TextView tv_introduced_name = (TextView) findViewById(R.id.tv_introduced_name);
-        TextView tv_introduced_surname = (TextView) findViewById(R.id.tv_introduced_surname);
-        TextView tv_introduced_age = (TextView) findViewById(R.id.tv_introduced_age);
+        init();
 
-        SharedPreferences prefSelected = getSharedPreferences("configItem", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editorItem = prefSelected.edit();
-        String itemName = prefSelected.getString("selectedItem", "selectedItemValue");
+        SharedPreferences prefSelected = getSharedPreferences(getString(R.string.pref_file_name), Context.MODE_PRIVATE);
+        String itemName = prefSelected.getString(getString(R.string.pref_selected_item), getString(R.string.def_value));
         tv_selected_item.setText(itemName);
-        String nameUser = prefSelected.getString("name", "nameValue");
+        String nameUser = prefSelected.getString(getString(R.string.pref_name), getString(R.string.def_value));
         tv_introduced_name.setText(nameUser);
-        String surnameUser = prefSelected.getString("surname", "surnameValue");
+        String surnameUser = prefSelected.getString(getString(R.string.pref_surname), getString(R.string.def_value));
         tv_introduced_surname.setText(surnameUser);
-        String ageUser = prefSelected.getString("age", "ageValue");
+        String ageUser = prefSelected.getString(getString(R.string.pref_age), getString(R.string.def_value));
         tv_introduced_age.setText(ageUser);
-        editorItem.commit();
+    }
+
+    public void init() {
+        tv_selected_item = (TextView) findViewById(R.id.tv_selected_item);
+        tv_introduced_name = (TextView) findViewById(R.id.tv_introduced_name);
+        tv_introduced_surname = (TextView) findViewById(R.id.tv_introduced_surname);
+        tv_introduced_age = (TextView) findViewById(R.id.tv_introduced_age);
     }
 
     @Override

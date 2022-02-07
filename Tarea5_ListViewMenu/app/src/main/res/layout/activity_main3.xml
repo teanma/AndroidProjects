@@ -19,9 +19,9 @@
         android:id="@+id/tv_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
+        android:layout_marginStart="108dp"
         android:layout_marginTop="204dp"
-        android:text="@string/tv_item"
+        android:text="@string/tv_selected_item"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,9 +29,9 @@
         android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="48dp"
-        android:text="@string/tv_name"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/tv_introd_name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_item" />
 
@@ -48,9 +48,9 @@
         android:id="@+id/tv_surname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="46dp"
-        android:text="@string/tv_surname"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/tv_introd_surname"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
@@ -67,9 +67,9 @@
         android:id="@+id/tv_age"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="124dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="40dp"
-        android:text="@string/tv_age"
+        android:text="@string/tv_introd_age"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_surname" />
 

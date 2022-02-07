@@ -53,11 +53,11 @@ public class MainActivity2 extends AppCompatActivity {
                     Toast.makeText(this, "El campo nombre es obligatorio", Toast.LENGTH_SHORT).show();
                 } else {
                     thirdScreen = new Intent(this, MainActivity3.class);
-                    SharedPreferences prefFormulary = getSharedPreferences("configItem", Context.MODE_PRIVATE);
+                    SharedPreferences prefFormulary = getSharedPreferences(getString(R.string.pref_file_name), Context.MODE_PRIVATE);
                     SharedPreferences.Editor editorItem = prefFormulary.edit();
-                    editorItem.putString("name", nombre);
-                    editorItem.putString("surname", apellido);
-                    editorItem.putString("age", edad);
+                    editorItem.putString(getString(R.string.pref_name), nombre);
+                    editorItem.putString(getString(R.string.pref_surname), apellido);
+                    editorItem.putString(getString(R.string.pref_age), edad);
                     editorItem.commit();
                     startActivity(thirdScreen);
                 }
@@ -94,11 +94,11 @@ public class MainActivity2 extends AppCompatActivity {
             Toast.makeText(this, "El campo nombre es obligatorio", Toast.LENGTH_SHORT).show();
         } else {
             thirdScreen = new Intent(this, MainActivity3.class);
-            SharedPreferences prefItem = getSharedPreferences("configItem", Context.MODE_PRIVATE);
+            SharedPreferences prefItem = getSharedPreferences(getString(R.string.pref_file_name), Context.MODE_PRIVATE);
             SharedPreferences.Editor editorItem = prefItem.edit();
-            editorItem.putString("name", nombre);
-            editorItem.putString("surname", apellido);
-            editorItem.putString("age", edad);
+            editorItem.putString(getString(R.string.pref_name), nombre);
+            editorItem.putString(getString(R.string.pref_surname), apellido);
+            editorItem.putString(getString(R.string.pref_age), edad);
             editorItem.commit();
             startActivity(thirdScreen);
         }

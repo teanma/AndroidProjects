@@ -62,9 +62,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
                 selectedItem = list.get(i);
-                SharedPreferences prefItem = getSharedPreferences("configItem", Context.MODE_PRIVATE);
+                SharedPreferences prefItem = getSharedPreferences(getString(R.string.pref_file_name), Context.MODE_PRIVATE);
                 SharedPreferences.Editor editorItem = prefItem.edit();
-                editorItem.putString("selectedItem", selectedItem);
+                editorItem.putString(getString(R.string.pref_selected_item), selectedItem);
                 editorItem.commit();
                 startActivity(secondaryScreen);
             }
@@ -78,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
         menu.setHeaderTitle("Seleccione opción");
 
         menu.add(0, 1, 0, "Borrar");
-        menu.add(0, 2, 0, "Detalles");
     }
 
     @Override
@@ -90,10 +89,6 @@ public class MainActivity extends AppCompatActivity {
                 this.list.remove(info.position);
                 this.adapter.notifyDataSetChanged();
                 Toast.makeText(this, "Elemento borrado", Toast.LENGTH_SHORT).show();
-                return true;
-            case 2:
-                Toast.makeText(this, "Mostrando detalles", Toast.LENGTH_SHORT).show();
-                constraintLayout.getContext();
                 return true;
             default:
                 return super.onContextItemSelected(item);
