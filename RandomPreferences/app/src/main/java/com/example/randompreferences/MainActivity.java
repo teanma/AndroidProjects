@@ -27,11 +27,15 @@ public class MainActivity extends AppCompatActivity {
 
     int randomValue;
 
-    int aciertos;
+    private static int aciertos;
 
-    int intentos;
+    private static int intentos;
 
     Intent secondScreen;
+
+    protected static final int ATTEMPTS_AVERAGE = intentos/aciertos;
+
+    protected static final int HIT_PERCENTAGE = aciertos*100/intentos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
         editor.putString(getString(R.string.random_value), String.valueOf(randomValue));
         editor.putString(getString(R.string.pref_hits), String.valueOf(aciertos));
         editor.putString(getString(R.string.pref_attempts), String.valueOf(intentos));
+        editor.putString(getString(R.string.pref_attempts_average), String.valueOf(ATTEMPTS_AVERAGE));
+        editor.putString(getString(R.string.pref_hit_percentage), String.valueOf(HIT_PERCENTAGE));
         editor.commit();
     }
 
@@ -67,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = prefFormulary.edit();
                 editor.putString(getString(R.string.pref_hits), String.valueOf(aciertos));
                 editor.putString(getString(R.string.pref_attempts), String.valueOf(intentos));
+                editor.putString(getString(R.string.pref_attempts_average), String.valueOf(ATTEMPTS_AVERAGE));
+                editor.putString(getString(R.string.pref_hit_percentage), String.valueOf(HIT_PERCENTAGE));
                 editor.commit();
                 startActivity(secondScreen);
             default:
@@ -87,11 +95,9 @@ public class MainActivity extends AppCompatActivity {
         if(number < randomValue) {
             Toast.makeText(this, "El número introducido es menor que el generado", Toast.LENGTH_SHORT).show();
             intentos++;
-
         } else if (number > randomValue) {
             Toast.makeText(this, "El número introducido es mayor que el generado", Toast.LENGTH_SHORT).show();
             intentos++;
-
         } else {
             Toast.makeText(this, "Acertaste el número", Toast.LENGTH_SHORT).show();
             aciertos++;
