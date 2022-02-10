@@ -48,8 +48,6 @@ public class MainActivity extends AppCompatActivity {
         editor.putString(getString(R.string.random_value), String.valueOf(randomValue));
         editor.putString(getString(R.string.pref_hits), String.valueOf(aciertos));
         editor.putString(getString(R.string.pref_attempts), String.valueOf(intentos));
-        /*editor.putString(getString(R.string.pref_hit_percentage), String.valueOf(porcentajeAciertos));
-        editor.putString(getString(R.string.pref_attempts_average), String.valueOf(mediaIntentos));*/
         editor.commit();
     }
 
@@ -69,8 +67,6 @@ public class MainActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = prefFormulary.edit();
                 editor.putString(getString(R.string.pref_hits), String.valueOf(aciertos));
                 editor.putString(getString(R.string.pref_attempts), String.valueOf(intentos));
-                /*editor.putString(getString(R.string.pref_hit_percentage), String.valueOf(porcentajeAciertos));
-                editor.putString(getString(R.string.pref_attempts_average), String.valueOf(mediaIntentos));*/
                 editor.commit();
                 startActivity(secondScreen);
             default:

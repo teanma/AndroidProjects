@@ -36,16 +36,16 @@ public class MainActivity2 extends AppCompatActivity {
         tv_med_intentos = (TextView) findViewById(R.id.tv_med_intentos);
 
         SharedPreferences prefSelected = getSharedPreferences(getString(R.string.pref_file_name), Context.MODE_PRIVATE);
-        int hits = prefSelected.getInt(getString(R.string.pref_hits), Integer.parseInt(getString(R.string.def_value)));
+        String hits = prefSelected.getString(getString(R.string.pref_hits), (getString(R.string.def_value)));
         tv_tot_aciertos.setText(hits);
-        int attempts = prefSelected.getInt(getString(R.string.pref_attempts), Integer.parseInt(getString(R.string.def_value)));
+        String attempts = prefSelected.getString(getString(R.string.pref_attempts), (getString(R.string.def_value)));
         tv_tot_intentos.setText(attempts);
-        media = attempts/hits;
-        porcentaje = hits*100/attempts;
-        String por_aciertos = prefSelected.getString(getString(R.string.pref_hit_percentage), String.valueOf(porcentaje));
+       /* media = attempts/hits;
+        porcentaje = hits*100/attempts;*/
+        /*String por_aciertos = prefSelected.getString(getString(R.string.pref_hit_percentage), String.valueOf(porcentaje));
         tv_por_aciertos.setText(por_aciertos);
         String med_intentos = prefSelected.getString(getString(R.string.pref_attempts_average), String.valueOf(media));
-        tv_med_intentos.setText(med_intentos);
+        tv_med_intentos.setText(med_intentos);*/
     }
 
     @Override
