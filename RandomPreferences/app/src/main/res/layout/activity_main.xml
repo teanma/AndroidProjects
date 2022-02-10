@@ -35,6 +35,7 @@
         android:layout_marginTop="28dp"
         android:ems="10"
         android:inputType="number"
+        android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_introduce_numero"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />

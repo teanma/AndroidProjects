@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">RandomPreferences</string>
+    <string name="pref_file_name">randomConfig</string>
+    <string name="random_value">randomValue</string>
+    <string name="pref_hits">hits</string>
+    <string name="pref_attempts">attempts</string>
+    <string name="pref_attempts_average">attemptsAverage</string>
+    <string name="pref_hit_percentage">hitPercentage</string>
+    <string name="def_value">value</string>
 </resources>
