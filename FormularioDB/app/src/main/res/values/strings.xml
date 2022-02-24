@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FormularioDB</string>
+    <string name="tv_nombre">Nombre:</string>
+    <string name="tv_formulario">Formulario</string>
+    <string name="tv_edad">Edad:</string>
+    <string name="tv_direccion">Dirección:</string>
+    <string name="tv_email">Email:</string>
+    <string name="tv_movil">Móvil:</string>
+    <string name="btn_guardar_datos">GUARDAR DATOS</string>
+</resources>
