@@ -33,15 +33,15 @@ public class MainActivity extends AppCompatActivity {
 
         Toast.makeText(this, "Creando la tabla usuarios...", Toast.LENGTH_SHORT).show();
 
-        /*String usuarios = "CREATE TABLE IF NOT EXISTS usuarios (id INTEGER PRIMARY KEY AUTOINCREMENT, nombre VARCHAR(50), edad VARCHAR(3), direccion VARCHAR(50), email VARCHAR(50), movil INT(9))";
-        database.execSQL(usuarios);*/
-        ContentValues insertUsers = new ContentValues();
+        String usuarios = "CREATE TABLE IF NOT EXISTS usuarios (id INTEGER PRIMARY KEY AUTOINCREMENT, nombre VARCHAR(50), edad VARCHAR(3), direccion VARCHAR(50), email VARCHAR(50), movil INT(9))";
+        database.execSQL(usuarios);
+        /*ContentValues insertUsers = new ContentValues();
         insertUsers.put("name", "nombre");
         insertUsers.put("age", "edad");
         insertUsers.put("address", "direccion");
         insertUsers.put("mail", "email");
         insertUsers.put("phone", "movil");
-        database.insert("usuarios", null, insertUsers);
+        database.insert("usuarios", null, insertUsers);*/
 
         Toast.makeText(this, "Tabla usuarios creada.", Toast.LENGTH_SHORT).show();
     }
@@ -77,20 +77,14 @@ public class MainActivity extends AppCompatActivity {
 
         /*String sentence = "INSERT INTO usuarios (nombre, edad, direccion, email, movil) VALUES (name, age, address, mail, phone)";
         database.execSQL(sentence);*/
-        /*ContentValues insertUsers = new ContentValues();
-        insertUsers.put("name", nombre);
-        insertUsers.put("age", edad);
-        insertUsers.put("address", direccion);
-        insertUsers.put("mail", email);
-        insertUsers.put("phone", movil);*/
+        ContentValues insertUsers = new ContentValues();
+        insertUsers.put("nombre", nombre);
+        insertUsers.put("edad", edad);
+        insertUsers.put("direccion", direccion);
+        insertUsers.put("email", email);
+        insertUsers.put("movil", movil);
 
         if(!nombre.isEmpty() && !edad.isEmpty() && !direccion.isEmpty() && !email.isEmpty() && !movil.isEmpty()) {
-            ContentValues insertUsers = new ContentValues();
-            insertUsers.put("name", nombre);
-            insertUsers.put("age", edad);
-            insertUsers.put("address", direccion);
-            insertUsers.put("mail", email);
-            insertUsers.put("phone", movil);
             database.insert("usuarios", null, insertUsers);
             Toast.makeText(this, "Datos guardados en la tabla usuarios", Toast.LENGTH_SHORT).show();
         } else {
