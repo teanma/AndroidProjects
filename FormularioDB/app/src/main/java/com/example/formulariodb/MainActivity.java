@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         Toast.makeText(this, "Creando la tabla usuarios...", Toast.LENGTH_SHORT).show();
 
-        String usuarios = "CREATE TABLE IF NOT EXISTS usuarios (id INTEGER PRIMARY KEY AUTOINCREMENT, nombre VARCHAR(50), edad VARCHAR(3), direccion VARCHAR(50), email VARCHAR(50), movil INT(9))";
+        String usuarios = "CREATE TABLE IF NOT EXISTS usuarios (id INTEGER PRIMARY KEY AUTOINCREMENT, nombre VARCHAR(50), edad INT(3), direccion VARCHAR(50), email VARCHAR(50), movil INT(9))";
         database.execSQL(usuarios);
         /*ContentValues insertUsers = new ContentValues();
         insertUsers.put("name", "nombre");
