@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">RepasoExamen</string>
+    <string name="tv_aux">TextView</string>
+    <string name="tv_apellido">Apellido:</string>
+    <string name="tv_edad">Edad:</string>
+    <string name="btn_guardar">GUARDAR</string>
+    <string name="tv_nombre">Nombre:</string>
+    <string name="tv_formulario">FORMULARIO</string>
+    <string name="tv_info">Info base de datos</string>
+    <string name="tv_user">Usuario:</string>
+    <string name="tv_user_number">Número de usuario:</string>
+    <string name="btn_insertar">INSERTAR</string>
+    <string name="tv_info_guardada">Información guardada</string>
+    <string name="tv_n">Nombre</string>
+    <string name="tv_sn">Apellido:</string>
+    <string name="tv_e">Edad:</string>
+    <string name="tv_ex">Extra:</string>
+    <string name="mi_anadir">Añadir</string>
+    <string name="mi_volver">Volver</string>
+    <string name="mi2_siguiente">Siguiente</string>
+</resources>
