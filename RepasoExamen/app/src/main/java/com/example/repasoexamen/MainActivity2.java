@@ -96,7 +96,7 @@ public class MainActivity2 extends AppCompatActivity {
         insertNewUsers.put("user", user);
         insertNewUsers.put("user_number", user_number);
 
-        if (user.isEmpty() && user_number.isEmpty()) {
+        if (user.isEmpty() || user_number.isEmpty()) {
             Toast.makeText(this, "Los campos no pueden estar vacíos", Toast.LENGTH_SHORT).show();
         } else {
             database.insert("newusers", null, insertNewUsers);

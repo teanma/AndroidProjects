@@ -21,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -72,9 +73,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 selectedExtra = list_extras.get(i);
-                SharedPreferences pref = getSharedPreferences("pref_formulary", Context.MODE_PRIVATE);
+                SharedPreferences pref = getSharedPreferences(getString(R.string.pref_fileName), Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = pref.edit();
-                editor.putString("extra", selectedExtra);
+                editor.putString(getString(R.string.pref_extra), selectedExtra);
                 editor.commit();
             }
         });
@@ -120,7 +121,12 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case 1:
                 if (et_new_item.getText().toString().isEmpty()) {
-                    Toast.makeText(this, "Introduzca un elemento nuevo", Toast.LENGTH_SHORT).show();
+                    Random r = new Random();
+                    int valorDado = r.nextInt(99)+1;
+                    String random = String.valueOf(valorDado);
+                    this.list_extras.add(random);
+                    this.adapter.notifyDataSetChanged();
+                    Toast.makeText(this, "Elemento aleatorio añadido", Toast.LENGTH_SHORT).show();
                 } else {
                     this.list_extras.add(et_new_item.getText().toString());
                     this.adapter.notifyDataSetChanged();
@@ -138,15 +144,15 @@ public class MainActivity extends AppCompatActivity {
         String surname = et_surname.getText().toString();
         String age = et_age.getText().toString();
 
-        if(name.isEmpty() && surname.isEmpty() && age.isEmpty()) {
+        if(name.isEmpty() || surname.isEmpty() || age.isEmpty()) {
             Toast.makeText(this, "Los campos son obligatorios", Toast.LENGTH_SHORT).show();
         } else {
             secondScreen = new Intent(this, MainActivity2.class);
-            SharedPreferences pref = getSharedPreferences("pref_formulary", MODE_PRIVATE);
+            SharedPreferences pref = getSharedPreferences(getString(R.string.pref_fileName), MODE_PRIVATE);
             SharedPreferences.Editor editor = pref.edit();
-            editor.putString("name", name);
-            editor.putString("surname", surname);
-            editor.putString("age", age);
+            editor.putString(getString(R.string.pref_name), name);
+            editor.putString(getString(R.string.pref_surname), surname);
+            editor.putString(getString(R.string.pref_age), age);
             editor.commit();
             startActivity(secondScreen);
         }
