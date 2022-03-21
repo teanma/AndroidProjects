@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">medical_appointment_teodor_mardale</string>
+    <string name="tv_crear_cita">Crear cita</string>
+    <string name="tv_dia">Día</string>
+    <string name="tv_hora">Hora</string>
+    <string name="tv_guardar_continuar">GUARDAR Y CONTINUAR</string>
+    <string name="tv_modalidad">Modalidad:</string>
+    <string name="pref_file_name">pref_appointment</string>
+    <string name="pref_day">dia</string>
+    <string name="pref_hour">hora</string>
+    <string name="pref_modality">modalidad</string>
+    <string name="pref_default">def</string>
+    <string name="tv_aux">TextView</string>
+    <string name="mi_eliminar">Eliminar</string>
+    <string name="tv_info">Información guardada</string>
+    <string name="tv_d">Día:</string>
+    <string name="tv_h">Hora:</string>
+    <string name="tv_m">Modalidad:</string>
+    <string name="tv_nuevo_dia">Día:</string>
+    <string name="tv_nueva_hora">Hora:</string>
+    <string name="tv_nueva_modalidad">Modalidad:</string>
+    <string name="btn_insertar">INSERTAR</string>
+</resources>
