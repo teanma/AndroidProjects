@@ -23,14 +23,14 @@ public class MainActivity3 extends AppCompatActivity {
 
         init();
 
-        SharedPreferences pref = getSharedPreferences("pref_formulary", MODE_PRIVATE);
-        String name = pref.getString("name", "default");
+        SharedPreferences pref = getSharedPreferences(getString(R.string.pref_fileName), MODE_PRIVATE);
+        String name = pref.getString(getString(R.string.pref_name), getString(R.string.pref_def));
         tv_intro_name.setText(name);
-        String surname = pref.getString("surname", "default");
+        String surname = pref.getString(getString(R.string.pref_surname), getString(R.string.pref_def));
         tv_intro_surname.setText(surname);
-        String age = pref.getString("age", "default");
+        String age = pref.getString(getString(R.string.pref_age), getString(R.string.pref_def));
         tv_intro_age.setText(age);
-        String extra = pref.getString("extra", "default");
+        String extra = pref.getString(getString(R.string.pref_extra), getString(R.string.pref_def));
         tv_intro_extra.setText(extra);
     }
 
